@@ -32,7 +32,7 @@ $currentURL = "https://www.cadumpstersep.com" . $_SERVER['REQUEST_URI'];
     <meta property="og:description" content="<?php echo $metaDescription; ?>">
     <meta property="og:image" content="https://www.cadumpstersep.com/images/hero.jpg">
 
-    <link rel="icon" type="image/png" href="../images/logo.png">
+    <link rel="icon" type="image/png" href="images/logo.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
