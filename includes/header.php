@@ -32,13 +32,13 @@ $currentURL = "https://www.cadumpstersep.com" . $_SERVER['REQUEST_URI'];
     <meta property="og:description" content="<?php echo $metaDescription; ?>">
     <meta property="og:image" content="https://www.cadumpstersep.com/images/hero.jpg">
 
-    <link rel="icon" type="image/png" href="/images/logo.png">
+    <link rel="icon" type="image/png" href="../images/logo.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
 
     <script type="application/ld+json">
         {
@@ -93,7 +93,7 @@ $currentURL = "https://www.cadumpstersep.com" . $_SERVER['REQUEST_URI'];
     <div class="header-wrapper" id="navWrapper">
         <header class="main-header">
             <a href="/" class="brand-logo">
-                <img src="/images/logo.png" alt="C&A Dumpsters Logo" id="headerLogo">
+                <img src="../images/logo.png" alt="C&A Dumpsters Logo" id="headerLogo">
             </a>
 
             <nav class="nav-links">

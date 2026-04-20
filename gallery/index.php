@@ -30,7 +30,7 @@ include '../includes/header.php';
 
             <div class="bento-card reveal-up gallery-item" data-category="residential" style="padding: 0; overflow: hidden; aspect-ratio: 4/3;">
                 <div style="position: relative; width: 100%; height: 100%; cursor: pointer;" class="gallery-hover-wrap">
-                    <img src="/images/gallery/driveway-dropoff.jpg" alt="C&A Dumpster carefully placed on a residential driveway in El Paso" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease-out-expo);">
+                    <img src="../images/gallery/driveway-dropoff.jpg" alt="C&A Dumpster carefully placed on a residential driveway in El Paso" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease-out-expo);">
                     <div class="gallery-overlay">
                         <h4>Driveway Safe Delivery</h4>
                         <p>Perfect placement for home renovations.</p>
@@ -40,7 +40,7 @@ include '../includes/header.php';
 
             <div class="bento-card reveal-up gallery-item" data-category="landscaping" style="padding: 0; overflow: hidden; aspect-ratio: 4/3; transition-delay: 0.1s;">
                 <div style="position: relative; width: 100%; height: 100%; cursor: pointer;" class="gallery-hover-wrap">
-                    <img src="/images/gallery/landscape.jpg" alt="Dumpster delivered for backyard landscaping project with tree branches" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease-out-expo);">
+                    <img src="../images/gallery/landscape.jpg" alt="Dumpster delivered for backyard landscaping project with tree branches" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease-out-expo);">
                     <div class="gallery-overlay">
                         <h4>Landscaping Cleanup</h4>
                         <p>Ideal for heavy brush and yard debris.</p>
@@ -50,7 +50,7 @@ include '../includes/header.php';
 
             <div class="bento-card reveal-up gallery-item" data-category="fleet" style="padding: 0; overflow: hidden; aspect-ratio: 4/3; transition-delay: 0.2s;">
                 <div style="position: relative; width: 100%; height: 100%; cursor: pointer;" class="gallery-hover-wrap">
-                    <img src="/images/gallery/multi.jpg" alt="Multiple C&A Dumpster containers ready for dispatch" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease-out-expo);">
+                    <img src="../images/gallery/multi.jpg" alt="Multiple C&A Dumpster containers ready for dispatch" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease-out-expo);">
                     <div class="gallery-overlay">
                         <h4>Inventory Ready</h4>
                         <p>Clean bins ready for immediate dispatch.</p>
@@ -60,7 +60,7 @@ include '../includes/header.php';
 
             <div class="bento-card reveal-up gallery-item" data-category="residential" style="padding: 0; overflow: hidden; aspect-ratio: 4/3;">
                 <div style="position: relative; width: 100%; height: 100%; cursor: pointer;" class="gallery-hover-wrap">
-                    <img src="/images/gallery/home-side.jpg" alt="C&A Dumpster delivered on the side of a residential home" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease-out-expo);">
+                    <img src="../images/gallery/home-side.jpg" alt="C&A Dumpster delivered on the side of a residential home" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease-out-expo);">
                     <div class="gallery-overlay">
                         <h4>Tight Space Delivery</h4>
                         <p>Expert placement exactly where you need it.</p>
@@ -70,7 +70,7 @@ include '../includes/header.php';
 
             <div class="bento-card reveal-up gallery-item" data-category="fleet" style="padding: 0; overflow: hidden; aspect-ratio: 4/3; transition-delay: 0.1s;">
                 <div style="position: relative; width: 100%; height: 100%; cursor: pointer;" class="gallery-hover-wrap">
-                    <img src="/images/gallery/pickup.jpg" alt="C&A Dumpsters heavy duty delivery truck picking up a load" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease-out-expo);">
+                    <img src="../images/gallery/pickup.jpg" alt="C&A Dumpsters heavy duty delivery truck picking up a load" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease-out-expo);">
                     <div class="gallery-overlay">
                         <h4>Heavy-Duty Fleet</h4>
                         <p>Equipped to haul away heavy materials securely.</p>
@@ -80,7 +80,7 @@ include '../includes/header.php';
 
             <div class="bento-card reveal-up gallery-item" data-category="landscaping" style="padding: 0; overflow: hidden; aspect-ratio: 4/3; transition-delay: 0.2s;">
                 <div style="position: relative; width: 100%; height: 100%; cursor: pointer;" class="gallery-hover-wrap">
-                    <img src="/images/gallery/landscape-debris.jpg" alt="Dumpster on driveway loaded with yard waste and landscaping debris" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease-out-expo);">
+                    <img src="../images/gallery/landscape-debris.jpg" alt="Dumpster on driveway loaded with yard waste and landscaping debris" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease-out-expo);">
                     <div class="gallery-overlay">
                         <h4>Yard Waste Removal</h4>
                         <p>Keeping driveways clean during major yard overhauls.</p>
@@ -90,7 +90,7 @@ include '../includes/header.php';
 
             <div class="bento-card reveal-up gallery-item" data-category="residential" style="padding: 0; overflow: hidden; aspect-ratio: 4/3;">
                 <div style="position: relative; width: 100%; height: 100%; cursor: pointer;" class="gallery-hover-wrap">
-                    <img src="/images/gallery/driveway-safe.jpg" alt="C&A Dumpster placed carefully near a residential garage" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease-out-expo);">
+                    <img src="../images/gallery/driveway-safe.jpg" alt="C&A Dumpster placed carefully near a residential garage" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease-out-expo);">
                     <div class="gallery-overlay">
                         <h4>Garage Cleanout Drop</h4>
                         <p>Positioned for optimal loading efficiency.</p>
@@ -110,7 +110,7 @@ include '../includes/header.php';
 
             <div class="bento-card reveal-up gallery-item" data-category="residential" style="padding: 0; overflow: hidden; aspect-ratio: 4/3; transition-delay: 0.2s;">
                 <div style="position: relative; width: 100%; height: 100%; cursor: pointer;" class="gallery-hover-wrap">
-                    <img src="/images/gallery/multi-driveway.jpg" alt="Multiple dumpsters positioned in a wide residential driveway" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease-out-expo);">
+                    <img src="../images/gallery/multi-driveway.jpg" alt="Multiple dumpsters positioned in a wide residential driveway" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease-out-expo);">
                     <div class="gallery-overlay">
                         <h4>Multi-Bin Projects</h4>
                         <p>Scaling our service to fit massive home renovations.</p>
@@ -120,7 +120,7 @@ include '../includes/header.php';
 
             <div class="bento-card reveal-up gallery-item" data-category="fleet" style="padding: 0; overflow: hidden; aspect-ratio: 4/3;">
                 <div style="position: relative; width: 100%; height: 100%; cursor: pointer;" class="gallery-hover-wrap">
-                    <img src="/images/gallery/flee-dropoff.jpg" alt="C&A Dumpsters truck dropping off a bin at a new location" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease-out-expo);">
+                    <img src="../images/gallery/flee-dropoff.jpg" alt="C&A Dumpsters truck dropping off a bin at a new location" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease-out-expo);">
                     <div class="gallery-overlay">
                         <h4>Reliable Logistics</h4>
                         <p>On-time, precise deliveries across the Borderland.</p>

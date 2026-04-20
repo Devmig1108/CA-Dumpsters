@@ -45,7 +45,7 @@ include '../includes/header.php';
 
             <div class="reveal-up" style="transition-delay: 0.2s;">
                 <div style="position: relative; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-float);">
-                    <img src="/images/truck.jpg" alt="C&A Dumpsters truck and container" style="width: 100%; height: auto; display: block; object-fit: cover; aspect-ratio: 4/3;">
+                    <img src="../images/truck.jpg" alt="C&A Dumpsters truck and container" style="width: 100%; height: auto; display: block; object-fit: cover; aspect-ratio: 4/3;">
                     <div style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 20px; background: linear-gradient(to top, rgba(15,23,42,0.9), transparent);">
                         <p style="color: var(--white); font-weight: 600; font-size: 1.1rem;">Ready for any size project.</p>
                     </div>
