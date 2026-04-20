@@ -38,7 +38,7 @@ $currentURL = "https://www.cadumpstersep.com" . $_SERVER['REQUEST_URI'];
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="..style.css">
 
     <script type="application/ld+json">
         {
@@ -95,12 +95,15 @@ $currentURL = "https://www.cadumpstersep.com" . $_SERVER['REQUEST_URI'];
             <a href="/" class="brand-logo">
                 <img src="/images/logo.png" alt="C&A Dumpsters Logo" id="headerLogo">
             </a>
+
             <nav class="nav-links">
-                <a href="/#process">How It Works</a>
-                <a href="/services/">Services & Pricing</a>
-                <a href="/#projects">Ideal For</a>
-                <a href="/#gallery">Gallery</a>
+                <a href="/">Home</a>
+                <a href="/about/">About Us</a>
+                <a href="/services/">Services</a>
+                <a href="/gallery/">Gallery</a>
+                <a href="/contact/">Contact Us</a>
             </nav>
+
             <div class="magnetic-wrap">
                 <a href="tel:9153834682" class="btn-call">📞 (915) 383-4682</a>
             </div>
@@ -114,9 +117,10 @@ $currentURL = "https://www.cadumpstersep.com" . $_SERVER['REQUEST_URI'];
     </div>
 
     <div class="mobile-drawer" id="mobileDrawer">
-        <a href="/#process" class="mobile-link">How It Works</a>
-        <a href="/services/" class="mobile-link">Services & Pricing</a>
-        <a href="/#projects" class="mobile-link">Ideal For</a>
-        <a href="/#gallery" class="mobile-link">Gallery</a>
+        <a href="/" class="mobile-link">Home</a>
+        <a href="/about/" class="mobile-link">About Us</a>
+        <a href="/services/" class="mobile-link">Services</a>
+        <a href="/gallery/" class="mobile-link">Gallery</a>
+        <a href="/contact/" class="mobile-link">Contact Us</a>
         <a href="tel:9153834682" class="btn-call">📞 (915) 383-4682</a>
     </div>
