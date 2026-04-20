@@ -93,7 +93,7 @@ $currentURL = "https://www.cadumpstersep.com" . $_SERVER['REQUEST_URI'];
     <div class="header-wrapper" id="navWrapper">
         <header class="main-header">
             <a href="/" class="brand-logo">
-                <img src="../images/logo.png" alt="C&A Dumpsters Logo" id="headerLogo">
+                <img src="images/logo.png" alt="C&A Dumpsters Logo" id="headerLogo">
             </a>
 
             <nav class="nav-links">
