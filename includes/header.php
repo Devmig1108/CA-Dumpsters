@@ -97,11 +97,11 @@ $currentURL = "https://www.cadumpstersep.com" . $_SERVER['REQUEST_URI'];
             </a>
 
             <nav class="nav-links">
-                <a href="/">Home</a>
-                <a href="/about/">About Us</a>
-                <a href="/services/">Services</a>
-                <a href="/gallery/">Gallery</a>
-                <a href="/contact/">Contact Us</a>
+                <a href="../">Home</a>
+                <a href="../about/">About Us</a>
+                <a href="../services/">Services</a>
+                <a href="../gallery/">Gallery</a>
+                <a href="../contact/">Contact Us</a>
             </nav>
 
             <div class="magnetic-wrap">
