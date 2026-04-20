@@ -118,9 +118,9 @@ $currentURL = "https://www.cadumpstersep.com" . $_SERVER['REQUEST_URI'];
 
     <div class="mobile-drawer" id="mobileDrawer">
         <a href="/" class="mobile-link">Home</a>
-        <a href="/about/" class="mobile-link">About Us</a>
-        <a href="/services/" class="mobile-link">Services</a>
-        <a href="/gallery/" class="mobile-link">Gallery</a>
-        <a href="/contact/" class="mobile-link">Contact Us</a>
+        <a href="../about/" class="mobile-link">About Us</a>
+        <a href="../services/" class="mobile-link">Services</a>
+        <a href="../gallery/" class="mobile-link">Gallery</a>
+        <a href="../contact/" class="mobile-link">Contact Us</a>
         <a href="tel:9153834682" class="btn-call">📞 (915) 383-4682</a>
     </div>
