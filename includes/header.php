@@ -1,6 +1,9 @@
 <?php
+// 1. Define your Base URL for the demo environment. 
+// When you go live on the root domain, just change this to: $baseURL = '';
+$baseURL = '/demo/c-a-dumpsters';
+
 // Dynamic SEO Variables
-// These default values will load if you forget to set them on a specific page
 if (!isset($pageTitle)) {
     $pageTitle = "C&A Dumpsters | Affordable Residential Dumpster Rental in El Paso";
 }
@@ -9,7 +12,8 @@ if (!isset($metaDescription)) {
 }
 
 // Generate the dynamic Canonical URL for the current page
-$currentURL = "https://www.cadumpstersep.com" . $_SERVER['REQUEST_URI'];
+// We also prepend the baseURL here so the canonical tags are accurate on the demo!
+$currentURL = "https://www.ervotech.site" . $baseURL . str_replace($baseURL, '', $_SERVER['REQUEST_URI']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,15 +34,15 @@ $currentURL = "https://www.cadumpstersep.com" . $_SERVER['REQUEST_URI'];
     <meta property="og:url" content="<?php echo $currentURL; ?>">
     <meta property="og:title" content="<?php echo $pageTitle; ?>">
     <meta property="og:description" content="<?php echo $metaDescription; ?>">
-    <meta property="og:image" content="https://www.cadumpstersep.com/images/hero.jpg">
+    <meta property="og:image" content="https://www.ervotech.site<?php echo $baseURL; ?>/images/hero.jpg">
 
-    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="icon" type="image/png" href="<?php echo $baseURL; ?>/images/logo.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/demo/c-a-dumpsters/style.css">
+    <link rel="stylesheet" href="<?php echo $baseURL; ?>/style.css">
 
     <script type="application/ld+json">
         {
@@ -92,16 +96,16 @@ $currentURL = "https://www.cadumpstersep.com" . $_SERVER['REQUEST_URI'];
 
     <div class="header-wrapper" id="navWrapper">
         <header class="main-header">
-            <a href="/" class="brand-logo">
-                <img src="images/logo.png" alt="C&A Dumpsters Logo" id="headerLogo">
+            <a href="<?php echo $baseURL; ?>/" class="brand-logo">
+                <img src="<?php echo $baseURL; ?>/images/logo.png" alt="C&A Dumpsters Logo" id="headerLogo">
             </a>
 
             <nav class="nav-links">
-                <a href="/.">Home</a>
-                <a href="about-us/">About Us</a>
-                <a href="services/">Services</a>
-                <a href="gallery/">Gallery</a>
-                <a href="contact/">Contact Us</a>
+                <a href="<?php echo $baseURL; ?>/">Home</a>
+                <a href="<?php echo $baseURL; ?>/about/">About Us</a>
+                <a href="<?php echo $baseURL; ?>/services/">Services</a>
+                <a href="<?php echo $baseURL; ?>/gallery/">Gallery</a>
+                <a href="<?php echo $baseURL; ?>/contact/">Contact Us</a>
             </nav>
 
             <div class="magnetic-wrap">
@@ -117,10 +121,10 @@ $currentURL = "https://www.cadumpstersep.com" . $_SERVER['REQUEST_URI'];
     </div>
 
     <div class="mobile-drawer" id="mobileDrawer">
-        <a href="/." class="mobile-link">Home</a>
-        <a href="about-us/" class="mobile-link">About Us</a>
-        <a href="services/" class="mobile-link">Services</a>
-        <a href="gallery/" class="mobile-link">Gallery</a>
-        <a href="contact/" class="mobile-link">Contact Us</a>
+        <a href="<?php echo $baseURL; ?>/" class="mobile-link">Home</a>
+        <a href="<?php echo $baseURL; ?>/about/" class="mobile-link">About Us</a>
+        <a href="<?php echo $baseURL; ?>/services/" class="mobile-link">Services</a>
+        <a href="<?php echo $baseURL; ?>/gallery/" class="mobile-link">Gallery</a>
+        <a href="<?php echo $baseURL; ?>/contact/" class="mobile-link">Contact Us</a>
         <a href="tel:9153834682" class="btn-call">📞 (915) 383-4682</a>
     </div>

@@ -1,17 +1,9 @@
-<section class="cta-strip">
-    <div class="container reveal-up">
-        <h2>Reserve Your Container.</h2>
-        <p>Don't wait until your driveway is full of trash. Call C&A Dumpsters today to secure your affordable drop-off date.</p>
-        <a href="tel:9153834682" class="btn-inverse">Call (915) 383-4682</a>
-    </div>
-</section>
-
 <footer class="main-footer">
     <div class="container reveal-up">
         <div class="footer-grid">
             <div class="footer-col">
-                <a href="index.php" class="footer-logo" style="display: block;">
-                    <img src="images/logo.png" alt="C&A Dumpsters Logo" id="footerLogo">
+                <a href="<?php echo $baseURL; ?>/" class="footer-logo" style="display: block;">
+                    <img src="<?php echo $baseURL; ?>/images/logo.png" alt="C&A Dumpsters Logo" id="footerLogo">
                 </a>
                 <p class="footer-about">El Paso's trusted choice for driveway-safe, flat-rate residential roll-off dumpsters. We make cleanup easy and affordable.</p>
                 <div style="display: flex; gap: 15px; margin-top: 20px;">
@@ -23,18 +15,18 @@
             <div class="footer-col">
                 <h4 class="footer-heading">Quick Links</h4>
                 <ul class="footer-links">
-                    <li><a href="index.php#process">How It Works</a></li>
-                    <li><a href="index.php#projects">Ideal Projects</a></li>
-                    <li><a href="index.php#pricing">Dumpster Sizes</a></li>
-                    <li><a href="index.php#gallery">Gallery</a></li>
+                    <li><a href="<?php echo $baseURL; ?>/#process">How It Works</a></li>
+                    <li><a href="<?php echo $baseURL; ?>/#projects">Ideal Projects</a></li>
+                    <li><a href="<?php echo $baseURL; ?>/#pricing">Dumpster Sizes</a></li>
+                    <li><a href="<?php echo $baseURL; ?>/gallery/">Gallery</a></li>
                 </ul>
             </div>
 
             <div class="footer-col">
                 <h4 class="footer-heading">Dumpster Sizes</h4>
                 <ul class="footer-links">
-                    <li><a href="index.php#pricing">14-Yard Bin</a></li>
-                    <li><a href="index.php#pricing">20-Yard Bin</a></li>
+                    <li><a href="<?php echo $baseURL; ?>/#pricing">14-Yard Bin</a></li>
+                    <li><a href="<?php echo $baseURL; ?>/#pricing">20-Yard Bin</a></li>
                 </ul>
             </div>
 
@@ -102,17 +94,19 @@
         const mobileLinks = document.querySelectorAll('.mobile-link');
         let isMenuOpen = false;
 
-        mobileMenuBtn.addEventListener('click', () => {
-            isMenuOpen = !isMenuOpen;
-            mobileMenuBtn.classList.toggle('is-active');
-            if (isMenuOpen) {
-                mobileDrawer.classList.add('is-open');
-                document.body.style.overflow = 'hidden';
-            } else {
-                mobileDrawer.classList.remove('is-open');
-                document.body.style.overflow = 'auto';
-            }
-        });
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                isMenuOpen = !isMenuOpen;
+                mobileMenuBtn.classList.toggle('is-active');
+                if (isMenuOpen) {
+                    mobileDrawer.classList.add('is-open');
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    mobileDrawer.classList.remove('is-open');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
 
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
@@ -125,13 +119,15 @@
 
         // 2. DYNAMIC NAV SCROLL LOGIC
         const navWrapper = document.getElementById('navWrapper');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navWrapper.classList.add('scrolled');
-            } else {
-                navWrapper.classList.remove('scrolled');
-            }
-        });
+        if (navWrapper) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navWrapper.classList.add('scrolled');
+                } else {
+                    navWrapper.classList.remove('scrolled');
+                }
+            });
+        }
 
         // 3. MAGNETIC CTA BUTTON LOGIC
         const magneticBtn = document.querySelector('.btn-call');
@@ -159,53 +155,7 @@
         window.addEventListener('scroll', checkReveals);
         checkReveals(); // Trigger on load
 
-        // 5. SIZE ESTIMATOR LOGIC (Only runs if element exists on page)
-        const sizeSelector = document.getElementById('sizeSelector');
-        if (sizeSelector) {
-            const sizeData = {
-                '14': {
-                    title: '14-Yard Dumpster',
-                    desc: 'The versatile bin for mid-sized home cleanouts and remodels.',
-                    specs: ['Holds about 4-5 pickup truck loads', 'Great for 2-car garage cleanouts', 'Perfect for flooring and carpet removal'],
-                    img: 'images/14yard.jpg'
-                },
-                '20': {
-                    title: '20-Yard Dumpster',
-                    desc: 'Our most popular size. Excellent for whole-home decluttering and major remodels.',
-                    specs: ['Holds about 6-8 pickup truck loads', 'Ideal for full kitchen & bath renovations', 'Perfect for moving & estate cleanouts'],
-                    img: 'images/20yard.jpg'
-                }
-            };
-
-            const buttons = document.querySelectorAll('.size-btn');
-            const titleEl = document.getElementById('sizeTitle');
-            const descEl = document.getElementById('sizeDesc');
-            const specsEl = document.getElementById('sizeSpecs');
-            const imgEl = document.getElementById('dumpsterImage');
-
-            buttons.forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    buttons.forEach(b => b.classList.remove('active'));
-                    e.target.classList.add('active');
-                    const size = e.target.getAttribute('data-size');
-                    const data = sizeData[size];
-
-                    titleEl.textContent = data.title;
-                    descEl.textContent = data.desc;
-                    imgEl.src = data.img;
-                    imgEl.alt = data.title;
-
-                    specsEl.innerHTML = '';
-                    data.specs.forEach(spec => {
-                        const li = document.createElement('li');
-                        li.textContent = spec;
-                        specsEl.appendChild(li);
-                    });
-                });
-            });
-        }
-
-        // 6. MULTI-CHANNEL WIDGET LOGIC
+        // 5. MULTI-CHANNEL WIDGET LOGIC
         const fabMain = document.getElementById('fabMain');
         const floatingWidget = document.getElementById('floatingWidget');
         const iconChat = document.querySelector('.fab-icon-chat');
