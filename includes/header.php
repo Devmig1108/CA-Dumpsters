@@ -38,7 +38,7 @@ $currentURL = "https://www.cadumpstersep.com" . $_SERVER['REQUEST_URI'];
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/demo/c-a-dumpsters/style.css">
 
     <script type="application/ld+json">
         {
@@ -98,7 +98,7 @@ $currentURL = "https://www.cadumpstersep.com" . $_SERVER['REQUEST_URI'];
 
             <nav class="nav-links">
                 <a href="/.">Home</a>
-                <a href="about/">About Us</a>
+                <a href="about-us/">About Us</a>
                 <a href="services/">Services</a>
                 <a href="gallery/">Gallery</a>
                 <a href="contact/">Contact Us</a>
@@ -118,7 +118,7 @@ $currentURL = "https://www.cadumpstersep.com" . $_SERVER['REQUEST_URI'];
 
     <div class="mobile-drawer" id="mobileDrawer">
         <a href="/." class="mobile-link">Home</a>
-        <a href="about/" class="mobile-link">About Us</a>
+        <a href="about-us/" class="mobile-link">About Us</a>
         <a href="services/" class="mobile-link">Services</a>
         <a href="gallery/" class="mobile-link">Gallery</a>
         <a href="contact/" class="mobile-link">Contact Us</a>
