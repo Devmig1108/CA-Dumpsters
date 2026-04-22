@@ -18,7 +18,8 @@ include '../includes/header.php';
 
 <section class="services-section" style="padding: 80px 0; background: var(--white); background-image: none;">
     <div class="container">
-        <div class="bento-grid" style="grid-template-columns: repeat(3, 1fr); gap: 30px;">
+
+        <div class="bento-grid">
 
             <div class="bento-card reveal-up" style="background: var(--brand-navy); color: var(--white);">
                 <h3 style="color: var(--white); margin-bottom: 30px; font-size: 1.5rem;">Contact Details</h3>

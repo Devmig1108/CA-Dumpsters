@@ -7,7 +7,25 @@ $metaDescription = "Learn more about C&A Dumpsters, El Paso's trusted local choi
 include '../includes/header.php';
 ?>
 
-<section class="hero" style="padding: 150px 0 100px;">
+<style>
+    /* Specific responsive grid for the About page story section */
+    .about-split-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+    }
+
+    /* Stacks the text and image on tablets and mobile screens */
+    @media (max-width: 1024px) {
+        .about-split-grid {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+    }
+</style>
+
+<section class="hero">
     <div class="container hero-grid" style="grid-template-columns: 1fr; text-align: center;">
         <div class="hero-text reveal-up">
             <h1 style="font-size: clamp(3rem, 5vw, 4.5rem);">Locally Owned.<br><span>Community Focused.</span></h1>
@@ -16,9 +34,9 @@ include '../includes/header.php';
     </div>
 </section>
 
-<section class="process-section" style="padding: 80px 0; background: var(--white); text-align: left;">
+<section class="process-section" style="background: var(--white); text-align: left;">
     <div class="container">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+        <div class="about-split-grid">
 
             <div class="reveal-up">
                 <h2 style="font-family: 'Montserrat', sans-serif; font-size: 2.5rem; color: var(--brand-navy); margin-bottom: 20px; line-height: 1.1; letter-spacing: -1px;">Built for El Paso Homeowners.</h2>
@@ -63,7 +81,7 @@ include '../includes/header.php';
             <p>Why property owners, contractors, and landscapers trust us with their projects.</p>
         </div>
 
-        <div class="bento-grid" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="bento-grid">
 
             <div class="bento-card reveal-up">
                 <div style="font-size: 3rem; margin-bottom: 20px;">🎯</div>
@@ -87,7 +105,7 @@ include '../includes/header.php';
     </div>
 </section>
 
-<section style="padding: 80px 0; background: var(--white); border-top: 1px solid var(--border-light);">
+<section class="process-section" style="background: var(--white); border-top: 1px solid var(--border-light);">
     <div class="container reveal-up" style="text-align: center;">
         <h2 style="font-family: 'Montserrat', sans-serif; font-size: 2rem; color: var(--brand-navy); margin-bottom: 20px;">Proudly Servicing the Greater El Paso Area</h2>
         <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 30px;">

@@ -7,8 +7,21 @@ $metaDescription = "Review our flat-rate pricing for 14-yard and 20-yard dumpste
 include '../includes/header.php';
 ?>
 
+<style>
+    /* Responsive 2-column grid specifically for the Services page */
+    .grid-2-col {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    @media (max-width: 1024px) {
+        .grid-2-col {
+            grid-template-columns: 1fr !important;
+        }
+    }
+</style>
+
 <section class="hero" style="padding: 150px 0 100px;">
-    <div class="container hero-grid" style="grid-template-columns: 1fr; text-align: center;">
+    <div class="container hero-grid" style="text-align: center;">
         <div class="hero-text reveal-up">
             <h1 style="font-size: clamp(3rem, 5vw, 4.5rem);">Transparent Pricing.<br><span>Clear Guidelines.</span></h1>
             <p style="margin: 0 auto 20px; max-width: 700px;">No hidden fees, no surprises. Review our flat-rate pricing, included rental terms, and material guidelines to ensure a smooth, hassle-free cleanup for your project.</p>
@@ -47,7 +60,7 @@ include '../includes/header.php';
             </div>
         </div>
 
-        <div class="bento-grid" style="grid-template-columns: repeat(2, 1fr); margin-top: 60px;">
+        <div class="bento-grid grid-2-col" style="margin-top: 60px;">
             <div class="bento-card reveal-up" style="text-align: center; padding: 50px;">
                 <h3 style="font-size: 2.5rem; color: var(--brand-navy);">14-Yard Bin</h3>
                 <p style="color: var(--text-light); margin-bottom: 20px;">Ideal for mid-sized cleanouts, garage purges, and flooring removal.</p>
@@ -72,7 +85,7 @@ include '../includes/header.php';
             <p>For environmental safety and transportation laws, strict guidelines apply to what can go in our bins.</p>
         </div>
 
-        <div class="bento-grid" style="grid-template-columns: repeat(2, 1fr);">
+        <div class="bento-grid grid-2-col">
             <div class="bento-card reveal-up" style="border-top: 6px solid var(--brand-green);">
                 <h3 style="display: flex; align-items: center; gap: 10px;"><span style="font-size: 2rem;">✅</span> Approved Materials</h3>
                 <p style="margin-bottom: 20px; color: var(--text-light);">You may load the following common residential and construction items:</p>
@@ -122,7 +135,7 @@ include '../includes/header.php';
             <p>Please review these guidelines to avoid extra charges or service delays.</p>
         </div>
 
-        <div class="bento-grid" style="grid-template-columns: repeat(3, 1fr); text-align: left;">
+        <div class="bento-grid" style="text-align: left;">
 
             <div class="bento-card reveal-up">
                 <div style="font-size: 2.5rem; margin-bottom: 15px;">🧱</div>
