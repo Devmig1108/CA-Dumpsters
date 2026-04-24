@@ -34,9 +34,9 @@ $currentURL = $baseURL . str_replace($baseURL, '', $_SERVER['REQUEST_URI']);
     <meta property="og:url" content="<?php echo $currentURL; ?>">
     <meta property="og:title" content="<?php echo $pageTitle; ?>">
     <meta property="og:description" content="<?php echo $metaDescription; ?>">
-    <meta property="og:image" content="/<?php echo $baseURL; ?>/images/hero.jpg">
+    <meta property="og:image" content="/<?php echo $baseURL; ?>images/hero.jpg">
 
-    <link rel="icon" type="image/png" href="<?php echo $baseURL; ?>/images/logo.png">
+    <link rel="icon" type="image/png" href="<?php echo $baseURL; ?>images/logo.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -97,7 +97,7 @@ $currentURL = $baseURL . str_replace($baseURL, '', $_SERVER['REQUEST_URI']);
     <div class="header-wrapper" id="navWrapper">
         <header class="main-header">
             <a href="<?php echo $baseURL; ?>" class="brand-logo">
-                <img src="<?php echo $baseURL; ?>/images/logo.png" alt="C&A Dumpsters Logo" id="headerLogo">
+                <img src="<?php echo $baseURL; ?>images/logo.png" alt="C&A Dumpsters Logo" id="headerLogo">
             </a>
 
             <nav class="nav-links">

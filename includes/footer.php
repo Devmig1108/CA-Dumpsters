@@ -2,8 +2,8 @@
     <div class="container reveal-up">
         <div class="footer-grid">
             <div class="footer-col">
-                <a href="<?php echo $baseURL; ?>/" class="footer-logo" style="display: block;">
-                    <img src="<?php echo $baseURL; ?>/images/logo.png" alt="C&A Dumpsters Logo" id="footerLogo">
+                <a href="<?php echo $baseURL; ?>" class="footer-logo" style="display: block;">
+                    <img src="<?php echo $baseURL; ?>images/logo.png" alt="C&A Dumpsters Logo" id="footerLogo">
                 </a>
                 <p class="footer-about">El Paso's trusted choice for driveway-safe, flat-rate residential roll-off dumpsters. We make cleanup easy and affordable.</p>
                 <div style="display: flex; gap: 15px; margin-top: 20px;">
