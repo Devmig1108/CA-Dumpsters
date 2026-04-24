@@ -1,9 +1,9 @@
 <?php
 // quote.php
 
-// 1. HONEYPOT CHECK (Must happen first)
+// 1. HONEYPOT CHECK (Anti-spam)
 if (!empty($_POST['company_website'])) {
-    // Silently terminate to trick the bot
+    // Bot detected. Silently terminate and redirect to trick the bot.
     header("Location: /thank-you.html");
     exit;
 }
@@ -13,6 +13,7 @@ $zeptoMailToken = "Zoho-enczapikey wSsVR60l/hTwXP11nTb7drw/n1kDBlqgQ0502ASovyCvG
 $verifiedSenderEmail = "noreply@ca-dumpsters.com"; // The domain you verified in ZeptoMail
 $clientRecipientEmail = "miguel@ervotechep.com"; // Where your client wants to receive the leads
 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     // 3. Sanitize inputs
@@ -20,16 +21,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
     $phone = htmlspecialchars(strip_tags(trim($_POST["phone"])));
     $service = htmlspecialchars(strip_tags(trim($_POST["service"])));
-    
-    // Check if message exists (since it's dynamically rendered)
     $message = isset($_POST["message"]) ? htmlspecialchars(strip_tags(trim($_POST["message"]))) : "No additional details provided.";
 
-    // Require the email field now
     if (empty($name) || empty($email) || empty($phone) || empty($service)) {
         die("Please fill out all required fields.");
     }
 
-    // Ensure the email format is valid before sending
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         die("Invalid email format.");
     }
@@ -48,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <p style='margin-top: 20px; font-size: 0.9em; color: #666;'><em>You can reply directly to this email to respond to {$name}, or call them at {$phone}.</em></p>
     ";
 
-    // 5. Prepare ZeptoMail JSON Payload (With reply_to added back)
+    // 5. Prepare ZeptoMail JSON Payload
     $postData = [
         "from" => [
             "address" => $verifiedSenderEmail,
@@ -90,19 +87,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
     curl_close($ch);
 
-    // 7. Handle Response (DEBUG MODE)
+    // 7. Handle Response (Production)
     if ($httpCode == 200 || $httpCode == 201) {
         header("Location: /thank-you.html"); 
         exit;
     } else {
-        // TEMPORARY DEBUGGING: Print the exact error from ZeptoMail to the screen
-        echo "<div style='font-family: sans-serif; padding: 20px; border: 2px solid red; background: #fff0f0; max-width: 800px; margin: 20px auto;'>";
-        echo "<h2 style='color: red; margin-top: 0;'>ZeptoMail API Error</h2>";
-        echo "<strong>HTTP Status Code:</strong> " . $httpCode . "<br><br>";
-        echo "<strong>Raw API Response:</strong><br>";
-        echo "<pre style='background: #333; color: #0f0; padding: 15px; overflow-x: auto;'>" . htmlspecialchars($response) . "</pre>";
-        echo "</div>";
-        exit;
+        error_log("ZeptoMail Error: " . $response);
+        echo "There was an error submitting your request. Please try calling us directly.";
     }
 
 } else {
