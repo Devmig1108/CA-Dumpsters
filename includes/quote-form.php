@@ -22,9 +22,18 @@ $titleColor = ($formClass === 'floating-form') ? 'var(--brand-navy)' : 'var(--wh
         <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 25px;">Budget-friendly options with no hidden fees.</p>
     <?php endif; ?>
 
-    <form action="/quote.php" method="POST" style="<?php echo ($formClass === 'solid-form' || $formClass === 'floating-form') ? 'display: flex; flex-direction: column; gap: 15px;' : ''; ?>">
+    <form action="/process-quote.php" method="POST" style="<?php echo ($formClass === 'solid-form' || $formClass === 'floating-form') ? 'display: flex; flex-direction: column; gap: 15px;' : ''; ?>">
+        
+        <div style="position: absolute; left: -9999px; top: -9999px;" aria-hidden="true">
+            <label for="company_website">Leave this field blank if you are human:</label>
+            <input type="text" name="company_website" id="company_website" tabindex="-1" autocomplete="off">
+        </div>
+        
         <div class="input-group">
             <input type="text" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="input-group">
+            <input type="email" name="email" placeholder="Email Address" required>
         </div>
         <div class="input-group">
             <input type="tel" name="phone" placeholder="Phone Number" required>
