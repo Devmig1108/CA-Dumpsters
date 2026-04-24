@@ -1,48 +1,53 @@
-<div class="form-container">
-    <h3 style="margin-bottom: 20px; font-family: 'Inter', sans-serif; color: #1e293b;">Request a Dumpster Quote</h3>
-    
-    <form action="process-quote.php" method="POST" id="dumpsterForm">
-        <div class="form-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-            <div class="form-group">
-                <label for="name" style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 5px;">Full Name *</label>
-                <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px;">
-            </div>
-            <div class="form-group">
-                <label for="email" style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 5px;">Email Address *</label>
-                <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px;">
-            </div>
+<?php
+// Determine which class to use based on $formStyle variable
+$formClass = 'hero-form'; // Default
+if (isset($formStyle)) {
+    if ($formStyle === 'solid') $formClass = 'solid-form';
+    if ($formStyle === 'floating') $formClass = 'floating-form';
+}
 
-            <div class="form-group">
-                <label for="phone" style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 5px;">Phone Number *</label>
-                <input type="tel" id="phone" name="phone" required style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px;">
-            </div>
-            <div class="form-group">
-                <label for="date" style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 5px;">Desired Delivery Date</label>
-                <input type="date" id="date" name="date" style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px;">
-            </div>
+// Adjust text based on the layout
+$titleText = (isset($formStyle) && ($formStyle === 'solid' || $formStyle === 'floating')) ? 'Send a Message' : 'Get a Quick Quote';
+$showSubtitle = (isset($formStyle) && ($formStyle === 'solid' || $formStyle === 'floating')) ? false : true;
+
+// Swap title color to dark navy if it's on the light floating background
+$titleColor = ($formClass === 'floating-form') ? 'var(--brand-navy)' : 'var(--white)';
+?>
+<div class="<?php echo $formClass; ?> reveal-up" style="transition-delay: 0.1s;">
+    <h3 style="color: <?php echo $titleColor; ?>; font-size: 1.5rem; margin-bottom: <?php echo ($showSubtitle) ? '5px' : '20px'; ?>;">
+        <?php echo $titleText; ?>
+    </h3>
+
+    <?php if ($showSubtitle): ?>
+        <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 25px;">Budget-friendly options with no hidden fees.</p>
+    <?php endif; ?>
+
+    <form action="/quote.php" method="POST" style="<?php echo ($formClass === 'solid-form' || $formClass === 'floating-form') ? 'display: flex; flex-direction: column; gap: 15px;' : ''; ?>">
+        <div class="input-group">
+            <input type="text" name="name" placeholder="Your Name" required>
         </div>
-
-        <div class="form-group" style="margin-top: 15px;">
-            <label for="size" style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 5px;">Dumpster Size Needed</label>
-            <select id="size" name="size" style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px; background: #fff;">
-                <option value="Unsure / Need Recommendation">Not sure, I need a recommendation</option>
-                <option value="10 Yard">10 Yard (Small cleanouts, heavy debris)</option>
-                <option value="20 Yard">20 Yard (Medium renovations, roofing)</option>
-                <option value="30 Yard">30 Yard (Large renovations, cleanouts)</option>
-                <option value="40 Yard">40 Yard (Major construction, commercial)</option>
+        <div class="input-group">
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+        </div>
+        <div class="input-group">
+            <select name="service" required>
+                <option value="" disabled selected>Select Container Size...</option>
+                <option value="14-Yard">14-Yard Dumpster (Medium Cleanouts)</option>
+                <option value="20-Yard">20-Yard Dumpster (Large Remodels)</option>
+                <?php if (isset($formStyle) && ($formStyle === 'solid' || $formStyle === 'floating')): ?>
+                    <option value="General Inquiry">General Inquiry / Other</option>
+                <?php endif; ?>
             </select>
         </div>
 
-        <div class="form-group" style="margin-top: 15px;">
-            <label for="address" style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 5px;">Delivery Address</label>
-            <input type="text" id="address" name="address" placeholder="123 Main St, City, State, ZIP" style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px;">
-        </div>
+        <?php if (isset($formStyle) && ($formStyle === 'solid' || $formStyle === 'floating')): ?>
+            <div class="input-group">
+                <textarea name="message" rows="4" placeholder="How can we help you? (e.g., Need a 20-yard bin this Friday)" required style="resize: vertical;"></textarea>
+            </div>
+        <?php endif; ?>
 
-        <div class="form-group" style="margin-top: 15px;">
-            <label for="details" style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 5px;">What are you disposing of?</label>
-            <textarea id="details" name="details" rows="3" placeholder="e.g., Household junk, construction debris, concrete..." style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px; resize: vertical;"></textarea>
-        </div>
-
-        <button type="submit" style="margin-top: 20px; width: 100%; padding: 12px; background-color: #0f172a; color: #fff; font-weight: bold; border: none; border-radius: 4px; cursor: pointer; text-transform: uppercase;">Get My Quote</button>
+        <button type="submit" class="btn-submit" style="margin-top: <?php echo ($formClass === 'hero-form') ? '10px' : '5px'; ?>;">
+            <?php echo ($formClass === 'solid-form' || $formClass === 'floating-form') ? 'Send Message' : 'Check Pricing & Availability'; ?>
+        </button>
     </form>
 </div>
