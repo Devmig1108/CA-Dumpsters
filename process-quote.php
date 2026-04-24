@@ -59,12 +59,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 ]
             ]
         ],
-        "reply_to" => [
-            [
-                "address" => $email,
-                "name" => $name
-            ]
-        ],
         "subject" => "New Lead: " . $name . " - " . $service,
         "htmlbody" => $htmlBody,
         // ADD THIS LINE BELOW:
