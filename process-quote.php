@@ -66,7 +66,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             ]
         ],
         "subject" => "New Lead: " . $name . " - " . $service,
-        "htmlbody" => $htmlBody
+        "htmlbody" => $htmlBody,
+        // ADD THIS LINE BELOW:
+        "textbody" => "New Website Inquiry from {$name}. Phone: {$phone}. Email: {$email}. Service: {$service}. Message: {$message}"
     ];
 
     // 6. Execute cURL Request
