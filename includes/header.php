@@ -13,7 +13,7 @@ if (!isset($metaDescription)) {
 
 // Generate the dynamic Canonical URL for the current page
 // We also prepend the baseURL here so the canonical tags are accurate on the demo!
-$currentURL = "https://www.ervotech.site" . $baseURL . str_replace($baseURL, '', $_SERVER['REQUEST_URI']);
+$currentURL = "/" . $baseURL . str_replace($baseURL, '', $_SERVER['REQUEST_URI']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +34,7 @@ $currentURL = "https://www.ervotech.site" . $baseURL . str_replace($baseURL, '',
     <meta property="og:url" content="<?php echo $currentURL; ?>">
     <meta property="og:title" content="<?php echo $pageTitle; ?>">
     <meta property="og:description" content="<?php echo $metaDescription; ?>">
-    <meta property="og:image" content="https://www.ervotech.site<?php echo $baseURL; ?>/images/hero.jpg">
+    <meta property="og:image" content="/<?php echo $baseURL; ?>/images/hero.jpg">
 
     <link rel="icon" type="image/png" href="<?php echo $baseURL; ?>/images/logo.png">
 
