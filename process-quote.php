@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <tr><th style='text-align: left; padding: 10px; border-bottom: 1px solid #eee;'>Service/Size:</th><td style='padding: 10px; border-bottom: 1px solid #eee;'>{$service}</td></tr>
         <tr><th style='text-align: left; padding: 10px;'>Message:</th><td style='padding: 10px;'>{$message}</td></tr>
     </table>
-    <p style='margin-top: 20px; font-size: 0.9em; color: #666;'><em>You can reply directly to this email to respond to {$name}, or call them at {$phone}.</em></p>
+    <p style='margin-top: 20px; font-size: 0.9em; color: #666;'><em>You can reply directly to the email listed above to respond to {$name}, or call them at {$phone}.</em></p>
     ";
 
     // 5. Prepare ZeptoMail JSON Payload
