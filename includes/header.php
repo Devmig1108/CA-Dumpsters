@@ -1,7 +1,7 @@
 <?php
 // 1. Define your Base URL for the demo environment. 
 // When you go live on the root domain, just change this to: $baseURL = '';
-$baseURL = '/demo/c-a-dumpsters';
+$baseURL = '/';
 
 // Dynamic SEO Variables
 if (!isset($pageTitle)) {
@@ -13,7 +13,7 @@ if (!isset($metaDescription)) {
 
 // Generate the dynamic Canonical URL for the current page
 // We also prepend the baseURL here so the canonical tags are accurate on the demo!
-$currentURL = "/" . $baseURL . str_replace($baseURL, '', $_SERVER['REQUEST_URI']);
+$currentURL = $baseURL . str_replace($baseURL, '', $_SERVER['REQUEST_URI']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,7 +42,7 @@ $currentURL = "/" . $baseURL . str_replace($baseURL, '', $_SERVER['REQUEST_URI']
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="<?php echo $baseURL; ?>/style.css">
+    <link rel="stylesheet" href="<?php echo $baseURL; ?>style.css">
 
     <script type="application/ld+json">
         {
@@ -96,16 +96,16 @@ $currentURL = "/" . $baseURL . str_replace($baseURL, '', $_SERVER['REQUEST_URI']
 
     <div class="header-wrapper" id="navWrapper">
         <header class="main-header">
-            <a href="<?php echo $baseURL; ?>/" class="brand-logo">
+            <a href="<?php echo $baseURL; ?>" class="brand-logo">
                 <img src="<?php echo $baseURL; ?>/images/logo.png" alt="C&A Dumpsters Logo" id="headerLogo">
             </a>
 
             <nav class="nav-links">
-                <a href="<?php echo $baseURL; ?>/">Home</a>
-                <a href="<?php echo $baseURL; ?>/about/">About Us</a>
-                <a href="<?php echo $baseURL; ?>/services/">Services</a>
-                <a href="<?php echo $baseURL; ?>/gallery/">Gallery</a>
-                <a href="<?php echo $baseURL; ?>/contact/">Contact Us</a>
+                <a href="<?php echo $baseURL; ?>">Home</a>
+                <a href="<?php echo $baseURL; ?>about/">About Us</a>
+                <a href="<?php echo $baseURL; ?>services/">Services</a>
+                <a href="<?php echo $baseURL; ?>gallery/">Gallery</a>
+                <a href="<?php echo $baseURL; ?>contact/">Contact Us</a>
             </nav>
 
             <div class="magnetic-wrap">
@@ -121,10 +121,10 @@ $currentURL = "/" . $baseURL . str_replace($baseURL, '', $_SERVER['REQUEST_URI']
     </div>
 
     <div class="mobile-drawer" id="mobileDrawer">
-        <a href="<?php echo $baseURL; ?>/" class="mobile-link">Home</a>
-        <a href="<?php echo $baseURL; ?>/about/" class="mobile-link">About Us</a>
-        <a href="<?php echo $baseURL; ?>/services/" class="mobile-link">Services</a>
-        <a href="<?php echo $baseURL; ?>/gallery/" class="mobile-link">Gallery</a>
-        <a href="<?php echo $baseURL; ?>/contact/" class="mobile-link">Contact Us</a>
+        <a href="<?php echo $baseURL; ?>" class="mobile-link">Home</a>
+        <a href="<?php echo $baseURL; ?>about/" class="mobile-link">About Us</a>
+        <a href="<?php echo $baseURL; ?>services/" class="mobile-link">Services</a>
+        <a href="<?php echo $baseURL; ?>gallery/" class="mobile-link">Gallery</a>
+        <a href="<?php echo $baseURL; ?>contact/" class="mobile-link">Contact Us</a>
         <a href="tel:9153834682" class="btn-call">📞 (915) 383-4682</a>
     </div>
