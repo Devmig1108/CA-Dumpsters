@@ -41,7 +41,7 @@ $currentURL = $baseURL . str_replace($baseURL, '', $_SERVER['REQUEST_URI']);
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+    <meta name="google-site-verification" content="8K0D2PAo3mCfoeCw5Q2FuofU2-PRZ8uEt1rJr-tjInc" />
     <link rel="stylesheet" href="<?php echo $baseURL; ?>style.css">
 
     <script type="application/ld+json">
