@@ -55,15 +55,6 @@ $currentURL = $baseURL . str_replace($baseURL, '', $_SERVER['REQUEST_URI']);
 
         gtag('config', 'AW-18165703817');
     </script>
-    <!-- Event snippet for Subscribe conversion page -->
-    <script>
-        gtag('event', 'conversion', {
-            'send_to': 'AW-18165703817/gMIFCMCQ0q0cEInJitZD',
-            'value': 1.0,
-            'currency': 'USD'
-        });
-    </script>
-
 
     <script type="application/ld+json">
         {
