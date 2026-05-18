@@ -1,7 +1,7 @@
 <?php
 // 1. Define specific SEO data for the Services page
-$pageTitle = "Services & Pricing | C&A Dumpsters El Paso";
-$metaDescription = "Review our flat-rate pricing for 14-yard and 20-yard dumpster rentals in El Paso. No hidden fees. See allowed materials and standard rental terms.";
+$pageTitle = "Dumpster Rental Services & Pricing | C&A Dumpsters El Paso";
+$metaDescription = "Fast, affordable dumpster rentals in El Paso. Review our flat-rate pricing for small and large bins. Perfect for roofing, construction, and residential cleanouts.";
 
 // 2. Include the header file from the parent directory
 include '../includes/header.php';
@@ -18,18 +18,48 @@ include '../includes/header.php';
             grid-template-columns: 1fr !important;
         }
     }
+    
+    /* Added subtle styling for the new use-case text blocks */
+    .service-use-case {
+        margin-top: 15px;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        text-align: left;
+    }
 </style>
 
 <section class="hero" style="padding: 150px 0 100px;">
     <div class="container hero-grid" style="text-align: center;">
         <div class="hero-text reveal-up">
-            <h1 style="font-size: clamp(3rem, 5vw, 4.5rem);">Transparent Pricing.<br><span>Clear Guidelines.</span></h1>
-            <p style="margin: 0 auto 20px; max-width: 700px;">No hidden fees, no surprises. Review our flat-rate pricing, included rental terms, and material guidelines to ensure a smooth, hassle-free cleanup for your project.</p>
+            <h1 style="font-size: clamp(3rem, 5vw, 4.5rem);">El Paso Dumpster Rental<br><span>Services & Pricing</span></h1>
+            <p style="margin: 0 auto 20px; max-width: 700px;">Transparent pricing. Clear guidelines. Fast local delivery. Review our flat-rate pricing, included rental terms, and service options for your next project.</p>
         </div>
     </div>
 </section>
 
-<section class="process-section" style="padding: 80px 0; background: var(--white);">
+<section class="use-cases-section" style="padding: 40px 0; background: var(--white);">
+    <div class="container">
+        <div class="section-header reveal-up" style="margin-bottom: 40px;">
+            <h2>Roll-Off Dumpsters for Every Project</h2>
+        </div>
+        <div class="bento-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); text-align: left;">
+            <div class="bento-card white-card reveal-up">
+                <h3 style="font-size: 1.4rem; color: var(--brand-navy);">🏠 Residential Cleanouts</h3>
+                <p class="service-use-case" style="color: var(--text-main);">Moving out, spring cleaning, or handling an estate? Our residential dumpster rentals are driveway-friendly and easy to load. Throw out old furniture, cardboard, household junk, and yard waste hassle-free.</p>
+            </div>
+            <div class="bento-card white-card reveal-up" style="transition-delay: 0.1s;">
+                <h3 style="font-size: 1.4rem; color: var(--brand-navy);">🔨 Roofing Dumpsters</h3>
+                <p class="service-use-case" style="color: var(--text-main);">Tearing off an old roof? We provide dedicated roofing dumpsters in El Paso designed specifically for asphalt shingles, underlayment, and roofing nails. Properly sized to handle residential roof replacements safely.</p>
+            </div>
+            <div class="bento-card white-card reveal-up" style="transition-delay: 0.2s;">
+                <h3 style="font-size: 1.4rem; color: var(--brand-navy);">🏗️ Construction & Concrete</h3>
+                <p class="service-use-case" style="color: var(--text-main);">Perfect for contractors or DIY renovations. Need a dirt dumpster rental or a bin for concrete? We accept heavy materials like concrete, dirt, fill, and topsoil (heavy materials must be kept 2 feet below the fill line).</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="process-section" style="padding: 80px 0; background: var(--light-bg);">
     <div class="container">
         <div class="section-header reveal-up" style="margin-bottom: 50px;">
             <h2>Standard Rental Terms</h2>
@@ -62,15 +92,15 @@ include '../includes/header.php';
 
         <div class="bento-grid grid-2-col" style="margin-top: 60px;">
             <div class="bento-card reveal-up" style="text-align: center; padding: 50px;">
-                <h3 style="font-size: 2.5rem; color: var(--brand-navy);">14-Yard Bin</h3>
-                <p style="color: var(--text-light); margin-bottom: 20px;">Ideal for mid-sized cleanouts, garage purges, and flooring removal.</p>
+                <h3 style="font-size: 2.5rem; color: var(--brand-navy);">14-Yard Bin<br><span style="font-size: 1.2rem; font-weight: 500; color: var(--text-light);">(Small/Medium Dumpster)</span></h3>
+                <p style="color: var(--text-light); margin-bottom: 20px;">Ideal for mid-sized cleanouts, garage purges, small roofing repairs, and flooring removal.</p>
                 <div style="font-family: 'Montserrat', sans-serif; font-size: 3.5rem; font-weight: 900; color: var(--brand-green); margin-bottom: 20px;">$300 <span style="font-size: 1.2rem; color: var(--text-light); font-weight: 600;">+ tax</span></div>
                 <a href="tel:9153834682" class="btn-call" style="width: 100%;">Reserve 14-Yard</a>
             </div>
 
             <div class="bento-card reveal-up" style="text-align: center; padding: 50px; background: var(--brand-navy); color: var(--white);">
-                <h3 style="font-size: 2.5rem; color: var(--white);">20-Yard Bin</h3>
-                <p style="color: rgba(255,255,255,0.7); margin-bottom: 20px;">Our most popular size. Perfect for whole-home decluttering and renovations.</p>
+                <h3 style="font-size: 2.5rem; color: var(--white);">20-Yard Bin<br><span style="font-size: 1.2rem; font-weight: 500; color: rgba(255,255,255,0.7);">(Large Dumpster)</span></h3>
+                <p style="color: rgba(255,255,255,0.7); margin-bottom: 20px;">Our most popular large roll-off. Perfect for whole-home decluttering, construction debris, and major renovations.</p>
                 <div style="font-family: 'Montserrat', sans-serif; font-size: 3.5rem; font-weight: 900; color: var(--brand-green-light); margin-bottom: 20px;">$380 <span style="font-size: 1.2rem; color: rgba(255,255,255,0.5); font-weight: 600;">+ tax</span></div>
                 <a href="tel:9153834682" class="btn-call" style="width: 100%; background: var(--white); color: var(--brand-navy);">Reserve 20-Yard</a>
             </div>
