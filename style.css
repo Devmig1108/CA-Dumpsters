@@ -1,6 +1,7 @@
 /* =========================================
     0. BRAND VARIABLES
     ========================================= */
+
 :root {
     --brand-green: #16a34a;
     --brand-green-glow: rgba(22, 163, 74, 0.4);
@@ -19,9 +20,11 @@
     --dot-pattern: radial-gradient(circle, #cbd5e1 1px, transparent 1px);
 }
 
+
 /* =========================================
     1. RESET & BASE
     ========================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -67,9 +70,11 @@ h4,
     transform: translateY(0) !important;
 }
 
+
 /* =========================================
     2. DYNAMIC MORPHING NAV & MOBILE MENU
     ========================================= */
+
 .header-wrapper {
     position: fixed;
     top: 20px;
@@ -169,7 +174,9 @@ h4,
     box-shadow: 0 10px 25px var(--brand-green-glow);
 }
 
+
 /* Mobile Hamburger Button */
+
 .mobile-menu-btn {
     display: none;
     background: none;
@@ -201,7 +208,9 @@ h4,
     transform: translateY(-8px) rotate(-45deg);
 }
 
+
 /* Full Screen Mobile Drawer */
+
 .mobile-drawer {
     position: fixed;
     top: 0;
@@ -245,9 +254,11 @@ h4,
     margin-top: 20px;
 }
 
+
 /* =========================================
     3. AFFORDABLE HERO SECTION
     ========================================= */
+
 .hero {
     position: relative;
     padding: 180px 0 160px;
@@ -320,7 +331,9 @@ h4,
     margin-bottom: 25px;
 }
 
+
 /* Add this below your .hero-form styles */
+
 .solid-form {
     background: var(--brand-navy);
     border-radius: 20px;
@@ -328,7 +341,9 @@ h4,
     box-shadow: var(--shadow-float);
 }
 
+
 /* Update the existing input rules to include textareas */
+
 .input-group input,
 .input-group select,
 .input-group textarea {
@@ -374,9 +389,11 @@ h4,
     box-shadow: var(--shadow-glow);
 }
 
+
 /* =========================================
     4. OVERLAPPING TRUST BAR
     ========================================= */
+
 .trust-wrapper {
     position: relative;
     z-index: 20;
@@ -429,9 +446,11 @@ h4,
     letter-spacing: 1px;
 }
 
+
 /* =========================================
     5. HOW IT WORKS
     ========================================= */
+
 .process-section {
     padding: 120px 0 60px;
     background: var(--surface-bg);
@@ -486,9 +505,11 @@ h4,
     color: var(--text-main);
 }
 
+
 /* =========================================
     6. BENTO BOX: PROJECT USE CASES
     ========================================= */
+
 .services-section {
     padding: 60px 0 120px;
     background: var(--surface-bg);
@@ -569,6 +590,10 @@ h4,
     position: relative;
 }
 
+.white-card h3 {
+    color: var(--brand-navy);
+}
+
 .service-list {
     list-style: none;
     position: relative;
@@ -606,9 +631,11 @@ h4,
     color: var(--white);
 }
 
+
 /* =========================================
     7. INTERACTIVE DUMPSTER SIZE ESTIMATOR
     ========================================= */
+
 .pricing-section {
     padding: 100px 0;
     background: var(--brand-navy);
@@ -734,9 +761,11 @@ h4,
     letter-spacing: 0;
 }
 
+
 /* =========================================
     8. PROJECT GALLERY 
     ========================================= */
+
 .gallery-section {
     padding: 100px 0;
     background: var(--surface-bg);
@@ -807,9 +836,11 @@ h4,
     transform: translateY(0);
 }
 
+
 /* =========================================
     9. MASSIVE CTA STRIP
     ========================================= */
+
 .cta-strip {
     background: var(--brand-green);
     padding: 100px 0;
@@ -875,9 +906,11 @@ h4,
     box-shadow: 0 20px 40px rgba(15, 23, 42, 0.4);
 }
 
+
 /* =========================================
     10. MODERN 4-COLUMN FOOTER
     ========================================= */
+
 .main-footer {
     background: var(--brand-navy);
     padding: 80px 0 40px;
@@ -978,9 +1011,11 @@ h4,
     transition: var(--transition-smooth);
 }
 
+
 /* =========================================
    FLOATING CARDS & FORMS (Contact Page)
    ========================================= */
+
 .floating-card {
     background: transparent;
     border-radius: 20px;
@@ -1031,9 +1066,11 @@ h4,
     color: var(--brand-navy);
 }
 
+
 /* =========================================
     11. MULTI-CHANNEL FLOATING WIDGET
     ========================================= */
+
 .floating-widget {
     position: fixed;
     bottom: 30px;
@@ -1178,57 +1215,49 @@ h4,
     transform: translateX(0);
 }
 
+
 /* =========================================
     RESPONSIVE DESIGN (MOBILE READY)
     ========================================= */
+
 @media (max-width: 1024px) {
     .header-wrapper.scrolled {
         width: 85%;
     }
-
     .hero-grid {
         grid-template-columns: 1fr;
         text-align: center;
         gap: 40px;
     }
-
     .hero-text p {
         margin: 0 auto 30px;
     }
-
     .hero::before {
         width: 100%;
         opacity: 0.2;
         mask-image: none;
         -webkit-mask-image: none;
     }
-
     .bento-grid {
         grid-template-columns: 1fr;
     }
-
     .bento-large {
         grid-column: span 1;
     }
-
     .trust-bar {
         padding: 30px;
         justify-content: center;
     }
-
     .process-grid {
         grid-template-columns: 1fr;
     }
-
     .size-details {
         grid-template-columns: 1fr;
         text-align: center;
     }
-
     .size-specs li {
         justify-content: center;
     }
-
     .footer-grid {
         grid-template-columns: 1fr 1fr;
         gap: 40px;
@@ -1243,90 +1272,71 @@ h4,
         transform: none;
         left: 0;
     }
-
     .header-wrapper.scrolled {
         width: 100%;
         top: 0;
     }
-
     .main-header {
         border-radius: 12px;
         padding: 10px 20px;
     }
-
     .header-wrapper.scrolled .main-header {
         border-radius: 12px;
     }
-
     .nav-links,
     .magnetic-wrap {
         display: none;
     }
-
     .mobile-menu-btn {
         display: block;
     }
-
     .hero {
         padding: 140px 0 100px;
     }
-
     .trust-wrapper {
         margin-top: -30px;
     }
-
     .trust-item {
         width: 100%;
         justify-content: center;
         text-align: left;
     }
-
     .section-header h2 {
         font-size: 2.5rem;
     }
-
     .cta-strip::before {
         font-size: 8rem;
     }
-
     .floating-widget {
         bottom: 20px;
         right: 20px;
     }
-
     .fab-main {
         width: 60px;
         height: 60px;
     }
-
     .fab-action {
         width: 50px;
         height: 50px;
     }
-
     .footer-grid {
         grid-template-columns: 1fr;
         text-align: center;
     }
-
     .footer-about {
         margin: 0 auto 20px;
     }
-
     .footer-contact-info p {
         justify-content: center;
     }
-
     .footer-bottom {
         flex-direction: column;
         gap: 15px;
         text-align: center;
     }
-
     .footer-bottom-links a {
         margin: 0 10px;
     }
-
     .footer-links a:hover {
         padding-left: 0;
         color: var(--brand-green);

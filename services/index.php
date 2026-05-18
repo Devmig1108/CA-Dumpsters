@@ -137,41 +137,41 @@ include '../includes/header.php';
 
         <div class="bento-grid" style="text-align: left;">
 
-            <div class="bento-card reveal-up">
+            <div class="bento-card white-card reveal-up">
                 <div style="font-size: 2.5rem; margin-bottom: 15px;">🧱</div>
                 <h3 style="font-size: 1.4rem;">Heavy Materials Rule</h3>
                 <p style="color: var(--text-main); font-size: 0.95rem;">If dumping extremely heavy materials (concrete, dirt, fill, or topsoil), you must <strong>only fill the dumpster 2 feet above the bin floor</strong>. Overfilling these materials creates dangerous overweight loads.</p>
                 <p style="color: #ef4444; font-weight: 700; margin-top: 15px;">Fee: $100 - $150</p>
             </div>
 
-            <div class="bento-card reveal-up" style="transition-delay: 0.1s;">
+            <div class="bento-card white-card reveal-up" style="transition-delay: 0.1s;">
                 <div style="font-size: 2.5rem; margin-bottom: 15px;">📏</div>
                 <h3 style="font-size: 1.4rem;">Fill Line & Tarping</h3>
                 <p style="color: var(--text-main); font-size: 0.95rem;">Do not fill the dumpster above the white fill line. Loads must be distributed evenly so our drivers can safely and securely tarp the container for transport.</p>
                 <p style="color: #ef4444; font-weight: 700; margin-top: 15px;">Overweight/Unsafe loads must be unloaded by customer.</p>
             </div>
 
-            <div class="bento-card reveal-up" style="transition-delay: 0.2s;">
+            <div class="bento-card white-card reveal-up" style="transition-delay: 0.2s;">
                 <div style="font-size: 2.5rem; margin-bottom: 15px;">🚧</div>
                 <h3 style="font-size: 1.4rem;">Accessibility (Dry Run)</h3>
                 <p style="color: var(--text-main); font-size: 0.95rem;">It is the customer's sole responsibility to ensure the container is accessible at the time of pick-up. Blocking the bin with vehicles, locked gates, or trailers will result in a dry run fee.</p>
                 <p style="color: #ef4444; font-weight: 700; margin-top: 15px;">Fee: $100 - $150</p>
             </div>
 
-            <div class="bento-card reveal-up">
+            <div class="bento-card white-card reveal-up">
                 <div style="font-size: 2.5rem; margin-bottom: 15px;">🏗️</div>
                 <h3 style="font-size: 1.4rem;">Do Not Move the Bin</h3>
                 <p style="color: var(--text-main); font-size: 0.95rem;">Attempting to move the dumpster yourself using heavy machinery or trucks is strictly prohibited and highly dangerous.</p>
                 <p style="color: #ef4444; font-weight: 700; margin-top: 15px;">Fee: $100 - $150</p>
             </div>
 
-            <div class="bento-card reveal-up" style="transition-delay: 0.1s;">
+            <div class="bento-card white-card reveal-up" style="transition-delay: 0.1s;">
                 <div style="font-size: 2.5rem; margin-bottom: 15px;">🚪</div>
                 <h3 style="font-size: 1.4rem;">Door Safety</h3>
                 <p style="color: var(--text-main); font-size: 0.95rem;">Please ensure the hinged door on the dumpster is properly closed and secured prior to pick-up. Leaving it open is subject to damages and/or extra time.</p>
             </div>
 
-            <div class="bento-card reveal-up" style="transition-delay: 0.2s;">
+            <div class="bento-card white-card reveal-up" style="transition-delay: 0.2s;">
                 <div style="font-size: 2.5rem; margin-bottom: 15px;">🎨</div>
                 <h3 style="font-size: 1.4rem;">Damage & Graffiti</h3>
                 <p style="color: var(--text-main); font-size: 0.95rem;">Property owners or contractors assume all liability for the dumpster during the rental period. Any graffiti, denting, or damage to the bin is subject to the cost of repairs.</p>
