@@ -29,7 +29,7 @@ include '../includes/header.php';
 </style>
 
 <section class="hero" style="padding: 150px 0 100px;">
-    <div class="container hero-grid" style="text-align: center;">
+    <div class="container hero-grid" style="text-align: center; grid-template-columns: 1fr;">
         <div class="hero-text reveal-up">
             <h1 style="font-size: clamp(3rem, 5vw, 4.5rem);">El Paso Dumpster Rental<br><span>Services & Pricing</span></h1>
             <p style="margin: 0 auto 20px; max-width: 700px;">Transparent pricing. Clear guidelines. Fast local delivery. Review our flat-rate pricing, included rental terms, and service options for your next project.</p>
