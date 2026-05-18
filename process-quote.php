@@ -20,10 +20,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = htmlspecialchars(strip_tags(trim($_POST["name"])));
     $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
     $phone = htmlspecialchars(strip_tags(trim($_POST["phone"])));
-    $service = htmlspecialchars(strip_tags(trim($_POST["service"])));
+    
+    // UPDATED: Now capturing project_type instead of service
+    $projectType = htmlspecialchars(strip_tags(trim($_POST["project_type"])));
     $message = isset($_POST["message"]) ? htmlspecialchars(strip_tags(trim($_POST["message"]))) : "No additional details provided.";
 
-    if (empty($name) || empty($email) || empty($phone) || empty($service)) {
+    if (empty($name) || empty($email) || empty($phone) || empty($projectType)) {
         die("Please fill out all required fields.");
     }
 
@@ -39,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <tr><th style='text-align: left; padding: 10px; border-bottom: 1px solid #eee;'>Name:</th><td style='padding: 10px; border-bottom: 1px solid #eee;'>{$name}</td></tr>
         <tr><th style='text-align: left; padding: 10px; border-bottom: 1px solid #eee;'>Email:</th><td style='padding: 10px; border-bottom: 1px solid #eee;'>{$email}</td></tr>
         <tr><th style='text-align: left; padding: 10px; border-bottom: 1px solid #eee;'>Phone:</th><td style='padding: 10px; border-bottom: 1px solid #eee;'>{$phone}</td></tr>
-        <tr><th style='text-align: left; padding: 10px; border-bottom: 1px solid #eee;'>Service/Size:</th><td style='padding: 10px; border-bottom: 1px solid #eee;'>{$service}</td></tr>
+        <tr><th style='text-align: left; padding: 10px; border-bottom: 1px solid #eee;'>Project Type:</th><td style='padding: 10px; border-bottom: 1px solid #eee;'>{$projectType}</td></tr>
         <tr><th style='text-align: left; padding: 10px;'>Message:</th><td style='padding: 10px;'>{$message}</td></tr>
     </table>
     <p style='margin-top: 20px; font-size: 0.9em; color: #666;'><em>You can reply directly to the email listed above to respond to {$name}, or call them at {$phone}.</em></p>
@@ -59,10 +61,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 ]
             ]
         ],
-        "subject" => "New Lead: " . $name . " - " . $service,
+        "subject" => "New Lead: " . $name . " - " . $projectType,
         "htmlbody" => $htmlBody,
-        // ADD THIS LINE BELOW:
-        "textbody" => "New Website Inquiry from {$name}. Phone: {$phone}. Email: {$email}. Service: {$service}. Message: {$message}"
+        "textbody" => "New Website Inquiry from {$name}. Phone: {$phone}. Email: {$email}. Project Type: {$projectType}. Message: {$message}"
     ];
 
     // 6. Execute cURL Request

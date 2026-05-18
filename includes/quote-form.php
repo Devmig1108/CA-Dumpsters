@@ -45,25 +45,13 @@ $titleColor = ($formClass === 'floating-form') ? 'var(--brand-navy)' : 'var(--wh
                 <option value="Residential Cleanout">Residential Cleanout (Furniture, Junk, Yard Waste)</option>
                 <option value="Roofing">Roofing (Shingles, Nails, Underlayment)</option>
                 <option value="Construction">Construction / Concrete / Dirt</option>
-                <option value="Other">Other</option>
-            </select>
-        </div>
-
-        <div class="input-group">
-            <select name="service" required>
-                <option value="" disabled selected>Select Container Size (Optional)</option>
-                <option value="14-Yard">14-Yard Dumpster (Small/Medium Cleanouts)</option>
-                <option value="20-Yard">20-Yard Dumpster (Large Remodels)</option>
-                <option value="Not Sure">Not Sure - Please Advise</option>
-                <?php if (isset($formStyle) && ($formStyle === 'solid' || $formStyle === 'floating')): ?>
-                    <option value="General Inquiry">General Inquiry / Other</option>
-                <?php endif; ?>
+                <option value="Other">Other / General Inquiry</option>
             </select>
         </div>
 
         <?php if (isset($formStyle) && ($formStyle === 'solid' || $formStyle === 'floating')): ?>
             <div class="input-group">
-                <textarea name="message" rows="4" placeholder="How can we help you? (e.g., Need a 20-yard bin in Socorro this Friday)" required style="resize: vertical;"></textarea>
+                <textarea name="message" rows="4" placeholder="Tell us about your project or required bin size (if known)..." required style="resize: vertical;"></textarea>
             </div>
         <?php endif; ?>
 
