@@ -25,7 +25,8 @@ $currentURL = $baseURL . str_replace($baseURL, '', $_SERVER['REQUEST_URI']);
 
     <title><?php echo $pageTitle; ?></title>
     <meta name="description" content="<?php echo $metaDescription; ?>">
-    <meta name="keywords" content="dumpster rental El Paso, roll off dumpsters, residential dumpster rental, cheap dumpsters El Paso, yard waste removal, C&A Dumpsters">
+    <meta name="keywords"
+        content="dumpster rental El Paso, roll off dumpsters, residential dumpster rental, cheap dumpsters El Paso, yard waste removal, C&A Dumpsters">
     <meta name="author" content="C&A Dumpsters">
 
     <link rel="canonical" href="<?php echo $currentURL; ?>">
@@ -40,7 +41,9 @@ $currentURL = $baseURL . str_replace($baseURL, '', $_SERVER['REQUEST_URI']);
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,800&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <meta name="google-site-verification" content="8K0D2PAo3mCfoeCw5Q2FuofU2-PRZ8uEt1rJr-tjInc" />
     <link rel="stylesheet" href="<?php echo $baseURL; ?>style.css">
     <!-- Google tag (gtag.js) -->
@@ -101,6 +104,15 @@ $currentURL = $baseURL . str_replace($baseURL, '', $_SERVER['REQUEST_URI']);
             "areaServed": ["El Paso, TX", "Santa Teresa, NM", "Clint, TX"],
             "priceRange": "$$"
         }
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPHLN4RTNS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-KPHLN4RTNS');
     </script>
 </head>
 
