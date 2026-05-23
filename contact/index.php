@@ -26,7 +26,9 @@ include '../includes/header.php';
 
                 <div style="margin-bottom: 30px; background: rgba(255,255,255,0.05); padding: 20px; border-radius: 12px; text-align: center;">
                     <p style="color: var(--brand-green-light); font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; font-weight: 700;">Fastest Way to Reach Us</p>
-                    <a href="tel:9153834682" style="display: inline-block; background: var(--brand-green); color: var(--white); font-size: 1.6rem; font-weight: 800; text-decoration: none; padding: 12px 24px; border-radius: 50px; box-shadow: var(--shadow-glow); transition: transform 0.3s ease;">(915) 383-4682</a>
+                    
+                    <a href="tel:9153834682" class="google-tracking-phone" style="display: inline-block; background: var(--brand-green); color: var(--white); font-size: 1.6rem; font-weight: 800; text-decoration: none; padding: 12px 24px; border-radius: 50px; box-shadow: var(--shadow-glow); transition: transform 0.3s ease;">(915) 383-4682</a>
+                    
                     <p style="color: rgba(255,255,255,0.6); font-size: 0.8rem; margin-top: 10px;">Tap to Call or Text</p>
                 </div>
 
@@ -86,7 +88,7 @@ include '../includes/header.php';
                     <p style="color: var(--text-light); font-weight: 500;">Proudly dispatching residential and construction dumpsters across El Paso, Socorro, Sunland Park, and Santa Teresa.</p>
                 </div>
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d217148.01633513364!2d-106.57793444439178!3d31.799480685934503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86e73f8bc5fe3b69%3A0xe39184e3ab9d0222!2sEl%20Paso%2C%20TX!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                    src="http://googleusercontent.com/maps.google.com/8"
                     width="100%"
                     height="450"
                     style="border:0; display: block;"

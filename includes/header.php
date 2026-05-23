@@ -114,6 +114,21 @@ $currentURL = $baseURL . str_replace($baseURL, '', $_SERVER['REQUEST_URI']);
 
         gtag('config', 'G-KPHLN4RTNS');
     </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18165703817"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'AW-18165703817');
+    </script>
+    <script>
+        gtag('config', 'AW-18165703817/lMRBCJj_8rEcEInJitZD', {
+            'phone_conversion_number': '(915) 383-4682'
+        });
+    </script>
+
 </head>
 
 <body>
