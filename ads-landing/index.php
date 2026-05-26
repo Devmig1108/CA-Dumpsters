@@ -8,17 +8,24 @@ include '../includes/header.php';
 ?>
 
 <style>
-    /* =========================================
-       LANDING PAGE SPECIFIC CSS 
-       (Overrides standard site styles for higher conversions)
-       ========================================= */
-    .nav-links {
-        display: none !important; /* Hide navigation to prevent users from leaving the page */
-    }
+    /* LANDING PAGE SPECIFIC CSS */
+    .nav-links { display: none !important; }
 
     /* The Mobile Sticky Call Button */
-    .sticky-mobile-cta {
-        display: none; /* Hidden on desktop */
+    .sticky-mobile-cta { display: none; }
+
+    /* Hero Pricing Badge */
+    .hero-price-badge {
+        display: inline-block;
+        background: rgba(22, 163, 74, 0.15);
+        border: 1px solid var(--brand-green);
+        color: var(--brand-green-light);
+        padding: 8px 16px;
+        border-radius: 50px;
+        font-weight: 800;
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
     }
 
     @media (max-width: 768px) {
@@ -40,24 +47,17 @@ include '../includes/header.php';
             box-shadow: 0 -5px 20px rgba(0,0,0,0.2);
             z-index: 99999;
             text-transform: uppercase;
-            letter-spacing: 1px;
         }
-        
-        /* Add padding to bottom of body so the sticky CTA doesn't cover footer text */
-        body {
-            padding-bottom: 70px;
-        }
-        
-        /* Hide your standard floating widget on this specific page to not clash with the new sticky bar */
-        #floatingWidget {
-            display: none !important;
-        }
+        body { padding-bottom: 70px; }
+        #floatingWidget { display: none !important; }
     }
 </style>
 
 <section class="hero" style="padding: 150px 0 100px;">
     <div class="container hero-grid centered" style="grid-template-columns: 1.2fr 0.8fr; align-items: center;">
         <div class="hero-text reveal-up">
+            <div class="hero-price-badge">Flat-Rate Rentals Starting at $350</div>
+            
             <h1 style="font-size: clamp(3rem, 5vw, 4.5rem); text-align: left;">El Paso's Most Reliable<br><span>Dumpster Rental.</span></h1>
             <p style="text-align: left;">Driveway-friendly delivery, transparent flat-rate pricing, and completely hassle-free pickup. Call now or get a fast quote below.</p>
             
@@ -73,15 +73,10 @@ include '../includes/header.php';
         </div>
 
         <?php
-        // Tell the include file to style this as a hero form
         $formStyle = 'default'; 
-        
-        // Inject the Google Ads tracking variable
         $leadSource = 'Google Ads Landing Page'; 
-        
         include '../includes/quote-form.php';
         ?>
-        
     </div>
 </section>
 
@@ -97,8 +92,8 @@ include '../includes/header.php';
         <div class="trust-item">
             <div class="trust-icon">💲</div>
             <div class="trust-text">
-                <h4>Flat-Rate Pricing</h4>
-                <p>No Hidden Fees or Surprises</p>
+                <h4>No Hidden Fees</h4>
+                <p>Tonnage Included in Price</p>
             </div>
         </div>
         <div class="trust-item">
@@ -115,7 +110,7 @@ include '../includes/header.php';
     <div class="container">
         <div class="section-header reveal-up">
             <h2>Find Your Dumpster Size.</h2>
-            <p>Select a container below to see what fits inside and find the most cost-effective option for your project.</p>
+            <p>Select a container below to view flat-rate pricing for your project.</p>
         </div>
 
         <div class="estimator-container reveal-up">
@@ -136,7 +131,8 @@ include '../includes/header.php';
                         <li>Great for 2-car garage cleanouts</li>
                         <li>Perfect for flooring and carpet removal</li>
                     </ul>
-                    <div class="price-tag" id="priceDisplay">Call for Rates <span>/ Flat Fee</span></div>
+                    
+                    <div class="price-tag" id="priceDisplay">$350 <span>/ Flat Fee</span></div>
                     
                     <a href="tel:9153834682" class="google-tracking-phone" style="display:inline-block; margin-top: 15px; color: var(--brand-green); text-decoration: none; font-weight: 700; text-transform: uppercase;">Book This Size →</a>
                 </div>
@@ -169,25 +165,24 @@ include '../includes/header.php';
     📞 TAP TO CALL: (915) 383-4682
 </a>
 
-<?php
-// Include the footer file
-include '../includes/footer.php';
-?>
+<?php include '../includes/footer.php'; ?>
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        // SIZE ESTIMATOR LOGIC
+        // UPDATED: Added real pricing to the JS Object
         const sizeData = {
             '14': {
                 title: '14-Yard Dumpster',
                 desc: 'The versatile bin for mid-sized home cleanouts and remodels.',
                 specs: ['Holds about 4-5 pickup truck loads', 'Great for 2-car garage cleanouts', 'Perfect for flooring and carpet removal'],
+                price: '$350',
                 img: '/images/14yard.jpg'
             },
             '20': {
                 title: '20-Yard Dumpster',
                 desc: 'Our most popular size. Excellent for whole-home decluttering and major remodels.',
                 specs: ['Holds about 6-8 pickup truck loads', 'Ideal for full kitchen & bath renovations', 'Perfect for moving & estate cleanouts'],
+                price: '$450',
                 img: '/images/20yard.jpg'
             }
         };
@@ -197,6 +192,7 @@ include '../includes/footer.php';
         const descEl = document.getElementById('sizeDesc');
         const specsEl = document.getElementById('sizeSpecs');
         const imgEl = document.getElementById('dumpsterImage');
+        const priceEl = document.getElementById('priceDisplay'); // Grab the price element
 
         buttons.forEach(btn => {
             btn.addEventListener('click', (e) => {
@@ -209,6 +205,9 @@ include '../includes/footer.php';
                 descEl.textContent = data.desc;
                 imgEl.src = data.img;
                 imgEl.alt = data.title;
+                
+                // Update the price dynamically
+                priceEl.innerHTML = `${data.price} <span>/ Flat Fee</span>`;
 
                 specsEl.innerHTML = '';
                 data.specs.forEach(spec => {
