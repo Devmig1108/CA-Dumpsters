@@ -28,6 +28,10 @@ $titleColor = ($formClass === 'floating-form') ? 'var(--brand-navy)' : 'var(--wh
             <label for="company_website">Leave this field blank if you are human:</label>
             <input type="text" name="company_website" id="company_website" tabindex="-1" autocomplete="off">
         </div>
+
+        <?php if (isset($leadSource)): ?>
+            <input type="hidden" name="lead_source" value="<?php echo htmlspecialchars($leadSource); ?>">
+        <?php endif; ?>
         
         <div class="input-group">
             <input type="text" name="name" placeholder="Your Name" required>

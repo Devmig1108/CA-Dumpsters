@@ -1,0 +1,222 @@
+<?php
+// 1. Define specific SEO data for the Ad Landing page
+$pageTitle = "Affordable Dumpster Rental El Paso | C&A Dumpsters";
+$metaDescription = "Flat-rate residential roll-off dumpster rentals in El Paso. Get a fast quote today.";
+
+// Include your header (Ensure your Google Ads DNI script is inside this file!)
+include '../includes/header.php';
+?>
+
+<style>
+    /* =========================================
+       LANDING PAGE SPECIFIC CSS 
+       (Overrides standard site styles for higher conversions)
+       ========================================= */
+    .nav-links {
+        display: none !important; /* Hide navigation to prevent users from leaving the page */
+    }
+
+    /* The Mobile Sticky Call Button */
+    .sticky-mobile-cta {
+        display: none; /* Hidden on desktop */
+    }
+
+    @media (max-width: 768px) {
+        .sticky-mobile-cta {
+            display: flex;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: var(--brand-green);
+            color: var(--white);
+            text-align: center;
+            padding: 18px 20px;
+            font-size: 1.3rem;
+            font-weight: 800;
+            text-decoration: none;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.2);
+            z-index: 99999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Add padding to bottom of body so the sticky CTA doesn't cover footer text */
+        body {
+            padding-bottom: 70px;
+        }
+        
+        /* Hide your standard floating widget on this specific page to not clash with the new sticky bar */
+        #floatingWidget {
+            display: none !important;
+        }
+    }
+</style>
+
+<section class="hero" style="padding: 150px 0 100px;">
+    <div class="container hero-grid centered" style="grid-template-columns: 1.2fr 0.8fr; align-items: center;">
+        <div class="hero-text reveal-up">
+            <h1 style="font-size: clamp(3rem, 5vw, 4.5rem); text-align: left;">El Paso's Most Reliable<br><span>Dumpster Rental.</span></h1>
+            <p style="text-align: left;">Driveway-friendly delivery, transparent flat-rate pricing, and completely hassle-free pickup. Call now or get a fast quote below.</p>
+            
+            <div style="margin-top: 30px; margin-bottom: 30px; text-align: left;">
+                <p style="color: var(--brand-green-light); font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; font-weight: 700;">Fastest Way to Reach Us</p>
+                <a href="tel:9153834682" class="google-tracking-phone" style="display: inline-block; background: var(--brand-green); color: var(--white); font-size: 1.6rem; font-weight: 800; text-decoration: none; padding: 12px 24px; border-radius: 50px; box-shadow: var(--shadow-glow); transition: transform 0.3s ease;">(915) 383-4682</a>
+            </div>
+            
+            <div style="display: flex; gap: 15px; align-items: center; justify-content: flex-start;">
+                <span style="display: flex; color: #facc15; font-size: 1.2rem;">★★★★★</span>
+                <span style="color: var(--white); font-weight: 600; font-size: 0.9rem;">Trusted Local Service</span>
+            </div>
+        </div>
+
+        <?php
+        // Tell the include file to style this as a hero form
+        $formStyle = 'default'; 
+        
+        // Inject the Google Ads tracking variable
+        $leadSource = 'Google Ads Landing Page'; 
+        
+        include '../includes/quote-form.php';
+        ?>
+        
+    </div>
+</section>
+
+<div class="trust-wrapper">
+    <div class="trust-bar reveal-up" style="transition-delay: 0.2s;">
+        <div class="trust-item">
+            <div class="trust-icon">🛣️</div>
+            <div class="trust-text">
+                <h4>Driveway Safe</h4>
+                <p>Protected Property Drop-off</p>
+            </div>
+        </div>
+        <div class="trust-item">
+            <div class="trust-icon">💲</div>
+            <div class="trust-text">
+                <h4>Flat-Rate Pricing</h4>
+                <p>No Hidden Fees or Surprises</p>
+            </div>
+        </div>
+        <div class="trust-item">
+            <div class="trust-icon">🤝</div>
+            <div class="trust-text">
+                <h4>Friendly Service</h4>
+                <p>Local & Customer-Focused</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="pricing" class="pricing-section" style="padding-top: 120px;">
+    <div class="container">
+        <div class="section-header reveal-up">
+            <h2>Find Your Dumpster Size.</h2>
+            <p>Select a container below to see what fits inside and find the most cost-effective option for your project.</p>
+        </div>
+
+        <div class="estimator-container reveal-up">
+            <div class="size-selector" id="sizeSelector">
+                <button class="size-btn active" data-size="14">14-Yard Bin</button>
+                <button class="size-btn" data-size="20">20-Yard Bin</button>
+            </div>
+
+            <div class="size-details">
+                <div class="size-image">
+                    <img id="dumpsterImage" src="/images/14yard.jpg" alt="14-Yard Dumpster">
+                </div>
+                <div class="size-info">
+                    <h3 id="sizeTitle">14-Yard Dumpster</h3>
+                    <p id="sizeDesc">The versatile bin for mid-sized home cleanouts and remodels.</p>
+                    <ul class="size-specs" id="sizeSpecs">
+                        <li>Holds about 4-5 pickup truck loads</li>
+                        <li>Great for 2-car garage cleanouts</li>
+                        <li>Perfect for flooring and carpet removal</li>
+                    </ul>
+                    <div class="price-tag" id="priceDisplay">Call for Rates <span>/ Flat Fee</span></div>
+                    
+                    <a href="tel:9153834682" class="google-tracking-phone" style="display:inline-block; margin-top: 15px; color: var(--brand-green); text-decoration: none; font-weight: 700; text-transform: uppercase;">Book This Size →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="services-section" style="padding: 80px 0; background: var(--white); background-image: none;">
+    <div class="container">
+        <div class="bento-card reveal-up" style="padding: 0; overflow: hidden; border: none; box-shadow: var(--shadow-card);">
+            <div style="padding: 30px 40px; border-bottom: 1px solid var(--border-light); background: var(--white);">
+                <h3 style="color: var(--brand-navy); margin-bottom: 5px; font-size: 1.5rem;">Service Area</h3>
+                <p style="color: var(--text-light); font-weight: 500;">Proudly dispatching residential and construction dumpsters across El Paso, Socorro, Sunland Park, and Santa Teresa.</p>
+            </div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108422.38883653138!2d-106.53617387140833!3d31.803734002011033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86e73f8bc5fe3b69%3A0xe39180e6eba336fa!2sEl%20Paso%2C%20TX!5e0!3m2!1sen!2sus!4v1716301389803!5m2!1sen!2sus"
+                width="100%"
+                height="450"
+                style="border:0; display: block;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<a href="tel:9153834682" class="sticky-mobile-cta google-tracking-phone">
+    📞 TAP TO CALL: (915) 383-4682
+</a>
+
+<?php
+// Include the footer file
+include '../includes/footer.php';
+?>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // SIZE ESTIMATOR LOGIC
+        const sizeData = {
+            '14': {
+                title: '14-Yard Dumpster',
+                desc: 'The versatile bin for mid-sized home cleanouts and remodels.',
+                specs: ['Holds about 4-5 pickup truck loads', 'Great for 2-car garage cleanouts', 'Perfect for flooring and carpet removal'],
+                img: '/images/14yard.jpg'
+            },
+            '20': {
+                title: '20-Yard Dumpster',
+                desc: 'Our most popular size. Excellent for whole-home decluttering and major remodels.',
+                specs: ['Holds about 6-8 pickup truck loads', 'Ideal for full kitchen & bath renovations', 'Perfect for moving & estate cleanouts'],
+                img: '/images/20yard.jpg'
+            }
+        };
+
+        const buttons = document.querySelectorAll('.size-btn');
+        const titleEl = document.getElementById('sizeTitle');
+        const descEl = document.getElementById('sizeDesc');
+        const specsEl = document.getElementById('sizeSpecs');
+        const imgEl = document.getElementById('dumpsterImage');
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                buttons.forEach(b => b.classList.remove('active'));
+                e.target.classList.add('active');
+                const size = e.target.getAttribute('data-size');
+                const data = sizeData[size];
+
+                titleEl.textContent = data.title;
+                descEl.textContent = data.desc;
+                imgEl.src = data.img;
+                imgEl.alt = data.title;
+
+                specsEl.innerHTML = '';
+                data.specs.forEach(spec => {
+                    const li = document.createElement('li');
+                    li.textContent = spec;
+                    specsEl.appendChild(li);
+                });
+            });
+        });
+    });
+</script>
