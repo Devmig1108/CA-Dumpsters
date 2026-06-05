@@ -9,10 +9,14 @@ include '../includes/header.php';
 
 <style>
     /* LANDING PAGE SPECIFIC CSS */
-    .nav-links { display: none !important; }
+    .nav-links {
+        display: none !important;
+    }
 
     /* The Mobile Sticky Call Button */
-    .sticky-mobile-cta { display: none; }
+    .sticky-mobile-cta {
+        display: none;
+    }
 
     /* Hero Pricing Badge */
     .hero-price-badge {
@@ -28,7 +32,29 @@ include '../includes/header.php';
         letter-spacing: 1px;
     }
 
+    /* Hero Grid Desktop Layout */
+    .hero-grid.centered {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        align-items: center;
+        gap: 40px;
+    }
+
     @media (max-width: 768px) {
+        /* Force the grid to stack into one column on phones */
+        .hero-grid.centered {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+
+        /* Force text to center on mobile instead of the left-align */
+        .hero-text h1,
+        .hero-text p,
+        .hero-text div {
+            text-align: center !important;
+            justify-content: center !important;
+        }
+
         .sticky-mobile-cta {
             display: flex;
             position: fixed;
@@ -44,39 +70,47 @@ include '../includes/header.php';
             text-decoration: none;
             justify-content: center;
             align-items: center;
-            box-shadow: 0 -5px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
             z-index: 99999;
             text-transform: uppercase;
         }
-        body { padding-bottom: 70px; }
-        #floatingWidget { display: none !important; }
+
+        body {
+            padding-bottom: 70px;
+        }
+
+        #floatingWidget {
+            display: none !important;
+        }
     }
 </style>
 
 <section class="hero" style="padding: 150px 0 100px;">
-    <div class="container hero-grid centered" style="grid-template-columns: 1.2fr 0.8fr; align-items: center;">
+    <div class="container hero-grid centered">
         <div class="hero-text reveal-up">
             <div class="hero-price-badge">Flat-Rate Rentals Starting at $350</div>
-            
+
             <h1 style="font-size: clamp(3rem, 5vw, 4.5rem); text-align: left;">El Paso's Most Reliable<br><span>Dumpster Rental.</span></h1>
             <p style="text-align: left;">Driveway-friendly delivery, transparent flat-rate pricing, and completely hassle-free pickup. Call now or get a fast quote below.</p>
-            
+
             <div style="margin-top: 30px; margin-bottom: 30px; text-align: left;">
                 <p style="color: var(--brand-green-light); font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; font-weight: 700;">Fastest Way to Reach Us</p>
                 <a href="tel:9153834682" class="google-tracking-phone" style="display: inline-block; background: var(--brand-green); color: var(--white); font-size: 1.6rem; font-weight: 800; text-decoration: none; padding: 12px 24px; border-radius: 50px; box-shadow: var(--shadow-glow); transition: transform 0.3s ease;">(915) 383-4682</a>
             </div>
-            
+
             <div style="display: flex; gap: 15px; align-items: center; justify-content: flex-start;">
                 <span style="display: flex; color: #facc15; font-size: 1.2rem;">★★★★★</span>
                 <span style="color: var(--white); font-weight: 600; font-size: 0.9rem;">Trusted Local Service</span>
             </div>
         </div>
 
-        <?php
-        $formStyle = 'default'; 
-        $leadSource = 'Google Ads Landing Page'; 
-        include '../includes/quote-form.php';
-        ?>
+        <div class="ad-form">
+            <?php
+            $formStyle = 'default';
+            $leadSource = 'Google Ads Landing Page';
+            include '../includes/quote-form.php';
+            ?>
+        </div>
     </div>
 </section>
 
@@ -131,9 +165,9 @@ include '../includes/header.php';
                         <li>Great for 2-car garage cleanouts</li>
                         <li>Perfect for flooring and carpet removal</li>
                     </ul>
-                    
+
                     <div class="price-tag" id="priceDisplay">$350 <span>/ Flat Fee</span></div>
-                    
+
                     <a href="tel:9153834682" class="google-tracking-phone" style="display:inline-block; margin-top: 15px; color: var(--brand-green); text-decoration: none; font-weight: 700; text-transform: uppercase;">Book This Size →</a>
                 </div>
             </div>
@@ -150,11 +184,7 @@ include '../includes/header.php';
             </div>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108422.38883653138!2d-106.53617387140833!3d31.803734002011033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86e73f8bc5fe3b69%3A0xe39180e6eba336fa!2sEl%20Paso%2C%20TX!5e0!3m2!1sen!2sus!4v1716301389803!5m2!1sen!2sus"
-                width="100%"
-                height="450"
-                style="border:0; display: block;"
-                allowfullscreen=""
-                loading="lazy"
+                width="100%" height="450" style="border:0; display: block;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
@@ -169,7 +199,6 @@ include '../includes/header.php';
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        // UPDATED: Added real pricing to the JS Object
         const sizeData = {
             '14': {
                 title: '14-Yard Dumpster',
@@ -192,7 +221,7 @@ include '../includes/header.php';
         const descEl = document.getElementById('sizeDesc');
         const specsEl = document.getElementById('sizeSpecs');
         const imgEl = document.getElementById('dumpsterImage');
-        const priceEl = document.getElementById('priceDisplay'); // Grab the price element
+        const priceEl = document.getElementById('priceDisplay'); 
 
         buttons.forEach(btn => {
             btn.addEventListener('click', (e) => {
@@ -205,8 +234,7 @@ include '../includes/header.php';
                 descEl.textContent = data.desc;
                 imgEl.src = data.img;
                 imgEl.alt = data.title;
-                
-                // Update the price dynamically
+
                 priceEl.innerHTML = `${data.price} <span>/ Flat Fee</span>`;
 
                 specsEl.innerHTML = '';
