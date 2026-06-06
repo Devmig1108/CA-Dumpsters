@@ -28,7 +28,7 @@ include '../includes/header.php';
         border-radius: 50px;
         font-weight: 800;
         font-size: 1.1rem;
-        margin-bottom: 20px;
+        margin-bottom: 5px; /* Reduced margin to pull the subtext closer */
         letter-spacing: 1px;
     }
 
@@ -89,6 +89,10 @@ include '../includes/header.php';
     <div class="container hero-grid centered">
         <div class="hero-text reveal-up">
             <div class="hero-price-badge">Flat-Rate Rentals Starting at $350</div>
+            
+            <p style="font-size: 0.9rem; font-weight: 700; color: #d1d5db; margin-bottom: 20px; text-align: left;">
+                ✅ No Hidden Tonnage Fees &nbsp;|&nbsp; ✅ No Delivery Fees
+            </p>
 
             <h1 style="font-size: clamp(3rem, 5vw, 4.5rem); text-align: left;">El Paso's Most Reliable<br><span>Dumpster Rental.</span></h1>
             <p style="text-align: left;">Driveway-friendly delivery, transparent flat-rate pricing, and completely hassle-free pickup. Call now or get a fast quote below.</p>
@@ -166,9 +170,13 @@ include '../includes/header.php';
                         <li>Perfect for flooring and carpet removal</li>
                     </ul>
 
-                    <div class="price-tag" id="priceDisplay">$350 <span>/ Flat Fee</span></div>
+                    <div class="price-tag" id="priceDisplay" style="margin-bottom: 0;">$350 <span>/ Flat Fee</span></div>
+                    
+                    <p style="font-size: 0.85rem; font-weight: 700; color: #4b5563; margin-top: 5px; margin-bottom: 15px;">
+                        Flat-Rate Pricing. Zero Hidden Tonnage Fees.
+                    </p>
 
-                    <a href="tel:9153834682" class="google-tracking-phone" style="display:inline-block; margin-top: 15px; color: var(--brand-green); text-decoration: none; font-weight: 700; text-transform: uppercase;">Book This Size →</a>
+                    <a href="tel:9153834682" class="google-tracking-phone" style="display:inline-block; margin-top: 5px; color: var(--brand-green); text-decoration: none; font-weight: 700; text-transform: uppercase;">Book This Size →</a>
                 </div>
             </div>
         </div>
