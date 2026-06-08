@@ -88,7 +88,7 @@ include '../includes/header.php';
 <section class="hero" style="padding: 150px 0 100px;">
     <div class="container hero-grid centered">
         <div class="hero-text reveal-up">
-            <div class="hero-price-badge">Flat-Rate Rentals Starting at $350</div>
+            <div class="hero-price-badge">Flat-Rate Rentals Starting at $300</div>
             
             <p style="font-size: 0.9rem; font-weight: 700; color: #d1d5db; margin-bottom: 20px; text-align: left;">
                 ✅ No Hidden Tonnage Fees &nbsp;|&nbsp; ✅ No Delivery Fees
@@ -170,7 +170,7 @@ include '../includes/header.php';
                         <li>Perfect for flooring and carpet removal</li>
                     </ul>
 
-                    <div class="price-tag" id="priceDisplay" style="margin-bottom: 0;">$350 <span>/ Flat Fee</span></div>
+                    <div class="price-tag" id="priceDisplay" style="margin-bottom: 0;">$300 <span>/ Flat Fee</span></div>
                     
                     <p style="font-size: 0.85rem; font-weight: 700; color: #4b5563; margin-top: 5px; margin-bottom: 15px;">
                         Flat-Rate Pricing. Zero Hidden Tonnage Fees.
@@ -212,14 +212,14 @@ include '../includes/header.php';
                 title: '14-Yard Dumpster',
                 desc: 'The versatile bin for mid-sized home cleanouts and remodels.',
                 specs: ['Holds about 4-5 pickup truck loads', 'Great for 2-car garage cleanouts', 'Perfect for flooring and carpet removal'],
-                price: '$350',
+                price: '$300',
                 img: '/images/14yard.jpg'
             },
             '20': {
                 title: '20-Yard Dumpster',
                 desc: 'Our most popular size. Excellent for whole-home decluttering and major remodels.',
                 specs: ['Holds about 6-8 pickup truck loads', 'Ideal for full kitchen & bath renovations', 'Perfect for moving & estate cleanouts'],
-                price: '$450',
+                price: '$380',
                 img: '/images/20yard.jpg'
             }
         };
