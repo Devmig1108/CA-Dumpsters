@@ -11,7 +11,7 @@ if (!empty($_POST['company_website'])) {
 // 2. Set ZeptoMail Credentials
 $zeptoMailToken = "Zoho-enczapikey wSsVR60l/hTwXP11nTb7drw/n1kDBlqgQ0502ASovyCvG6iT9sdoxEzHUQ/0SvdKFDVpFjcQ9bgtnRcG1TsGidoumwkDASiF9mqRe1U4J3x17qnvhDzOWGVdkRqLJIwLwQtqmGBgEMEr+g==";
 $verifiedSenderEmail = "info@ca-dumpsters.com"; 
-$clientRecipientEmail = "miguel@ervotechep.com"; 
+$clientRecipientEmail = "ca.dumpsters.ep@gmail.com"; 
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
