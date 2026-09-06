@@ -2,8 +2,10 @@
 // Determine which class to use based on $formStyle variable
 $formClass = 'hero-form'; // Default
 if (isset($formStyle)) {
-    if ($formStyle === 'solid') $formClass = 'solid-form';
-    if ($formStyle === 'floating') $formClass = 'floating-form';
+    if ($formStyle === 'solid')
+        $formClass = 'solid-form';
+    if ($formStyle === 'floating')
+        $formClass = 'floating-form';
 }
 
 // Adjust text based on the layout
@@ -14,16 +16,19 @@ $showSubtitle = (isset($formStyle) && ($formStyle === 'solid' || $formStyle === 
 $titleColor = ($formClass === 'floating-form') ? 'var(--brand-navy)' : 'var(--white)';
 ?>
 <div class="<?php echo $formClass; ?> reveal-up" style="transition-delay: 0.1s;">
-    <h3 style="color: <?php echo $titleColor; ?>; font-size: 1.5rem; margin-bottom: <?php echo ($showSubtitle) ? '5px' : '20px'; ?>;">
+    <h3
+        style="color: <?php echo $titleColor; ?>; font-size: 1.5rem; margin-bottom: <?php echo ($showSubtitle) ? '5px' : '20px'; ?>;">
         <?php echo $titleText; ?>
     </h3>
 
     <?php if ($showSubtitle): ?>
-        <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 25px;">Budget-friendly options with no hidden fees.</p>
+        <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 25px;">Budget-friendly options with no hidden
+            fees.</p>
     <?php endif; ?>
 
-    <form action="/process-quote.php" method="POST" style="<?php echo ($formClass === 'solid-form' || $formClass === 'floating-form') ? 'display: flex; flex-direction: column; gap: 15px;' : ''; ?>">
-        
+    <form action="/process-quote.php" method="POST"
+        style="<?php echo ($formClass === 'solid-form' || $formClass === 'floating-form') ? 'display: flex; flex-direction: column; gap: 15px;' : ''; ?>">
+
         <div style="position: absolute; left: -9999px; top: -9999px;" aria-hidden="true">
             <label for="company_website">Leave this field blank if you are human:</label>
             <input type="text" name="company_website" id="company_website" tabindex="-1" autocomplete="off">
@@ -32,7 +37,7 @@ $titleColor = ($formClass === 'floating-form') ? 'var(--brand-navy)' : 'var(--wh
         <?php if (isset($leadSource)): ?>
             <input type="hidden" name="lead_source" value="<?php echo htmlspecialchars($leadSource); ?>">
         <?php endif; ?>
-        
+
         <div class="input-group">
             <input type="text" name="name" placeholder="Your Name" required>
         </div>
@@ -42,7 +47,7 @@ $titleColor = ($formClass === 'floating-form') ? 'var(--brand-navy)' : 'var(--wh
         <div class="input-group">
             <input type="tel" name="phone" placeholder="Phone Number" required>
         </div>
-        
+
         <div class="input-group">
             <select name="project_type" required>
                 <option value="" disabled selected>What do you need a dumpster for?</option>
@@ -55,11 +60,17 @@ $titleColor = ($formClass === 'floating-form') ? 'var(--brand-navy)' : 'var(--wh
 
         <?php if (isset($formStyle) && ($formStyle === 'solid' || $formStyle === 'floating')): ?>
             <div class="input-group">
-                <textarea name="message" rows="4" placeholder="Tell us about your project or required bin size (if known)..." required style="resize: vertical;"></textarea>
+                <textarea name="message" rows="4"
+                    placeholder="Tell us about your project or required bin size (if known)..." required
+                    style="resize: vertical;"></textarea>
             </div>
         <?php endif; ?>
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAAEqguEUGfF3iTzDI" data-action="quote_form" data-theme="auto"
+            data-size="flexible" data-appearance="interaction-only">
+        </div>
 
-        <button type="submit" class="btn-submit" style="margin-top: <?php echo ($formClass === 'hero-form') ? '10px' : '5px'; ?>;">
+        <button type="submit" class="btn-submit"
+            style="margin-top: <?php echo ($formClass === 'hero-form') ? '10px' : '5px'; ?>;">
             <?php echo ($formClass === 'solid-form' || $formClass === 'floating-form') ? 'Send Message' : 'Check Pricing & Availability'; ?>
         </button>
     </form>

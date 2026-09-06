@@ -128,6 +128,10 @@ $currentURL = $baseURL . str_replace($baseURL, '', $_SERVER['REQUEST_URI']);
             'phone_conversion_number': '(915) 383-4682'
         });
     </script>
+    <link rel="preconnect" href="https://challenges.cloudflare.com">
+
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer>
+    </script>
 
 </head>
 
